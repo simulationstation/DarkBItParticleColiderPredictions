@@ -1,0 +1,32 @@
+{
+  "channel_A": {
+    "r": 0.6331340873292702,
+    "r_err": 0.16863631847594107,
+    "phi_deg": -55.78394766245267,
+    "phi_err_deg": 10.44705647995553,
+    "chi2_dof": 1.016286225275991
+  },
+  "channel_B": {
+    "r": 0.6392013118754437,
+    "r_err": 0.1169534431552742,
+    "phi_deg": -151.28907960267094,
+    "phi_err_deg": 151.83977140317828,
+    "chi2_dof": 4.776118584407694
+  },
+  "comparison": {
+    "delta_r": -0.0060672245461734775,
+    "delta_r_err": 0.20522260054631647,
+    "delta_r_sigma": 0.02956411491727575,
+    "delta_phi_deg": 95.50513194021829,
+    "delta_phi_err_deg": 152.1987423366725,
+    "delta_phi_sigma": 0.6275027669345347
+  },
+  "likelihood_ratio": {
+    "chi2_unconstrained": 177.22666410767,
+    "chi2_constrained": 203.1875709731839,
+    "delta_chi2": 25.96090686551392,
+    "delta_dof": 2,
+    "p_value": 2.304945715070339e-06
+  },
+  "verdict": "RANK-1 CONSTRAINT DISFAVORED"
+}
