@@ -1,0 +1,11 @@
+# Y-state Rank-1 Test Commands
+
+# Run main analysis
+cd /home/primary/DarkBItParticleColiderPredictions/y_rank1_test
+nohup python3 -u src/y_rank1_analysis.py > logs/analysis.log 2>&1 &
+
+# Monitor progress
+tail -f logs/analysis.log
+
+# Check if running
+ps aux | grep y_rank1_analysis | grep -v grep

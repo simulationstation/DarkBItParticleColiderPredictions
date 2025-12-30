@@ -1,0 +1,82 @@
+/home/primary/DarkBItParticleColiderPredictions/y_rank1_test/src/y_rank1_analysis.py:498: SyntaxWarning: invalid escape sequence '\P'
+  ax.plot(r_A, phi_A * 180/np.pi, 'b*', markersize=15, label=f'A: r={r_A:.2f}, $\Phi$={phi_A*180/np.pi:.1f}')
+/home/primary/DarkBItParticleColiderPredictions/y_rank1_test/src/y_rank1_analysis.py:499: SyntaxWarning: invalid escape sequence '\P'
+  ax.plot(r_B, phi_B * 180/np.pi, 'g*', markersize=15, label=f'B: r={r_B:.2f}, $\Phi$={phi_B*180/np.pi:.1f}')
+/home/primary/DarkBItParticleColiderPredictions/y_rank1_test/src/y_rank1_analysis.py:501: SyntaxWarning: invalid escape sequence '\P'
+  label=f'Shared: r={r_shared:.2f}, $\Phi$={phi_shared*180/np.pi:.1f}')
+======================================================================
+Y-state Rank-1 Bottleneck Test
+Testing R = c(Y4360)/c(Y4220) invariance across decay channels
+======================================================================
+
+Loading data...
+Channel A (Belle pi+pi- J/psi): 76 points, E=[3.81, 5.47] GeV
+Channel B (BaBar pi+pi- psi2S): 35 points, E=[4.13, 7.48] GeV
+
+============================================================
+Fitting Channel A (Belle pi+pi- J/psi)...
+============================================================
+Channel A results:
+  c1 = 2.59
+  c2 = 4.31
+  phi = -83.8 deg
+  R_A = 1.667 * exp(i * -83.8 deg)
+  chi2/dof = 0.632
+  NLL = 21.80
+
+============================================================
+Fitting Channel B (BaBar pi+pi- psi2S)...
+============================================================
+Channel B results:
+  c1 = 1.55
+  c2 = 4.99
+  phi = -69.7 deg
+  R_B = 3.211 * exp(i * -69.7 deg)
+  chi2/dof = 0.145
+  NLL = 2.03
+
+Fit health gates (chi2/dof < 3.0):
+  Channel A: PASS (0.63)
+  Channel B: PASS (0.14)
+
+============================================================
+Fitting Joint Constrained (shared R)...
+============================================================
+Shared R = 3.444 * exp(i * 191.1 deg)
+NLL_constrained = 23.99
+NLL_unconstrained = 23.83
+
+Lambda = 2*(NLL_con - NLL_unc) = 0.3153
+
+============================================================
+Bootstrap p-value estimation...
+============================================================
+Running 500 bootstrap replicates...
+Valid bootstrap samples: 500/500
+Bootstrap p-value = 0.4000
+
+============================================================
+Computing profile likelihood contours...
+============================================================
+Shared R within 95% CL of Channel A: YES
+Shared R within 95% CL of Channel B: YES
+Saved contours to /home/primary/DarkBItParticleColiderPredictions/y_rank1_test/out/contours_overlay.png
+
+============================================================
+FINAL VERDICT
+============================================================
+Verdict: SUPPORTED
+Reason: p=0.400 > 0.05 and shared R within both 95% regions
+
+Report saved to: /home/primary/DarkBItParticleColiderPredictions/y_rank1_test/out/REPORT.md
+Contours saved to: /home/primary/DarkBItParticleColiderPredictions/y_rank1_test/out/contours_overlay.png
+
+======================================================================
+SUMMARY
+======================================================================
+Channel A (Belle pi+pi- J/psi): R_A = 1.667 * exp(i * -83.8 deg)
+Channel B (BaBar pi+pi- psi2S): R_B = 3.211 * exp(i * -69.7 deg)
+Shared: R = 3.444 * exp(i * 191.1 deg)
+Lambda = 0.3153
+Bootstrap p-value = 0.4000
+Verdict: SUPPORTED
