@@ -1,0 +1,39 @@
+============================================================
+CMS Rank-1 Bottleneck Test (Publication Grade v2.0)
+============================================================
+
+Data: 24 (A), 12 (B) bins
+dof_diff: 2 (complex R constraint)
+
+1) Fitting constrained model (shared R, 300 starts)...
+   NLL_con = 16.87
+   R_shared = 7.509 * exp(i * 1.513)
+   Converged: 285/300
+
+2) Fitting unconstrained model (independent R, 300 starts)...
+   NLL_unc = 16.62
+   R_A = 8.009 * exp(i * 1.508)
+   R_B = 7.592 * exp(i * 1.554)
+   Converged: 293/300
+
+3) Lambda = 2*(NLL_con - NLL_unc) = 0.50
+
+4) Fit health:
+   Channel A: chi2/dof=1.21, dev/dof=1.19 -> HEALTHY
+   Channel B: chi2/dof=1.91, dev/dof=2.42 -> HEALTHY
+
+5) Wilks approximation (dof=2, reference only):
+   chi2(2) 95% threshold: 5.99
+   p_wilks = 0.7791
+
+6) Bootstrap p-value (800 replicates, auto workers)...
+   p_boot = 0.3987 (319/800 exceedances)
+   Minimum resolvable p = 0.0013
+
+============================================================
+VERDICT: NOT_REJECTED
+Reason: p=0.3987 >= 0.05
+============================================================
+
+Report written to: /home/primary/DarkBItParticleColiderPredictions/cms_x6900_rank1_v4/out/run/RANK1_RESULT.md
+Optimizer audit written to: /home/primary/DarkBItParticleColiderPredictions/cms_x6900_rank1_v4/out/run/RANK1_OPTIMIZER_AUDIT.md

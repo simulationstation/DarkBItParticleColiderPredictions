@@ -1,0 +1,8 @@
+mkdir -p cms_x6900_rank1_v4/{data/{hepdata,cds},extracted,out,src,logs}
+curl -L -H 'Accept: application/vnd.hepdata.ld+json' https://doi.org/10.17182/hepdata.141028 -o data/hepdata/record_ld.json
+curl -L https://cds.cern.ch/record/2929529/files/Figure_002.pdf -o data/cds/Figure_002.pdf
+curl -L https://www.hepdata.net/download/table/ins2668013/Figure%201/1/csv -o data/hepdata/figure1_spectrum.csv
+python3 src/convert_hepdata.py
+python3 src/extract_channelB.py
+python3 src/extract_channelB_v2.py
+# Trim Channel A to 6.8-7.4 GeV

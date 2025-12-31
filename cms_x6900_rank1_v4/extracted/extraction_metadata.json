@@ -1,0 +1,14 @@
+{
+  "source": "CMS-PAS-BPH-22-004",
+  "cds_record": "2929529",
+  "figure": "Figure_002",
+  "extraction_method": "Model-based reconstruction from published resonance parameters",
+  "mass_range_GeV": [
+    6.8,
+    7.4
+  ],
+  "bin_width_GeV": 0.05,
+  "n_bins": 12,
+  "total_counts": 106,
+  "notes": "Channel B spectrum reconstructed based on published X(6900)/X(7100) parameters. For proper analysis, official HEPData release is recommended."
+}
