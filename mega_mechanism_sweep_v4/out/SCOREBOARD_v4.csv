@@ -1,0 +1,10 @@
+test_name,experiment,data_fidelity,type,channels,family,gates,Lambda,p_boot,chi2_A,chi2_B,winner,notes
+cms_x6900_x7100,CMS,vector_extraction,AMPLITUDE,4mu vs 2mu2e,tetraquark,PASS,1.825,0.403,1.016,2.487,M0,p=0.403 >= 0.05 (not rejected)
+atlas_x6900_x7200,ATLAS,figure_extraction,AMPLITUDE,4mu vs 4mu+2pi,tetraquark,MISMATCH,1.537,,1.394,9.742,NO_VERDICT,Gates: MISMATCH
+babar_phi_f0,BaBar,hepdata_numeric,AMPLITUDE,phi-pipi vs phi-f0,light_mesons,PASS,342.14,0.0,1.141,2.816,M1,"p=0.0000 < 0.05, Lambda=342.1"
+babar_omega,BaBar,hepdata_numeric,AMPLITUDE,omega-pipi vs omega-f0,light_mesons,PASS,958.27,0.0,1.188,1.169,M1,"p=0.0000 < 0.05, Lambda=958.3"
+y_states_belle_babar,Belle/BaBar,hepdata_numeric,AMPLITUDE,Jpsi-pipi vs psi2S-pipi,Y_states,UNDERCONSTRAINED,0.706,0.732,0.703,0.364,NO_VERDICT,Gates: UNDERCONSTRAINED
+besiii_y_states,BESIII,hepdata_numeric,AMPLITUDE,Jpsi-pipi vs psi3686-pipi,Y_states,MISMATCH,2915.53,0.482,1.66,8.816,NO_VERDICT,Gates: MISMATCH
+babar_kstar_k,BaBar,hepdata_numeric,AMPLITUDE,K*K I=0 vs I=1,light_mesons,UNDERCONSTRAINED,0.071,,0.01,0.015,NO_VERDICT,Gates: UNDERCONSTRAINED
+babar_phi_eta,BaBar,hepdata_numeric,AMPLITUDE,phi-eta vs KK-eta,light_mesons,UNDERCONSTRAINED,0.037,,0.018,0.023,NO_VERDICT,Gates: UNDERCONSTRAINED
+lhcb_pair1_tight_quad,LHCb,official_supplementary,PROXY,Table1 vs Table2 (mKp>1.9),pentaquark,PASS,3.582,0.056,1.074,1.152,PROXY_NOT_REJECTED,p=0.056 >= 0.05
