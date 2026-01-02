@@ -8,19 +8,20 @@ We test an amplitude-level organizing hypothesis for exotic-hadron families obse
 
 ## Exotic Families Status
 
-| Family | States | Channels | Verdict | p_boot | Λ | Status |
-|--------|--------|----------|---------|--------|---|--------|
-| **CMS X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | NOT_REJECTED | 0.40 | 0.50 | **Validated** |
-| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | NOT_REJECTED | 0.42 | 1.69 | **Validated** |
-| **Belle Zb** | Zb(10610), Zb(10650) | πΥ(1S), πΥ(2S) | NOT_REJECTED | 0.83 | 0.27 | **Prelim** |
-| **LHCb Pc doublet** | Pc(4440), Pc(4457) | J/ψp (full), J/ψp (tight) | NOT_REJECTED | 0.34 | 1.83 | **Prelim** |
-| **Strange Pcs** | Pcs(4459), Pcs(4338) | J/ψΛ (primary), J/ψΛ (alt) | NOT_REJECTED | 0.18 | 3.19 | **Prelim** |
-| **BESIII Y** | Y(4220), Y(4320) | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.07 | 4.60 | **Prelim** |
-| **BESIII/Belle ISR Y** | Y(4260), Y(4360) | ISR π+π-J/ψ, ISR π+π-ψ(2S) | DISFAVORED | 0.03 | 7.26 | **Prelim** |
-| **BaBar ω (control)** | ω(1420), ω(1650) | ωπ+π-, ωf0 | NOT_REJECTED | 0.84 | 0.44 | **Prelim** |
-| X(3872) | ccqq | J/ψππ, D*D | - | - | - | Pending |
+| Family | States | Channels | Verdict | p_boot | Λ | Data | Status |
+|--------|--------|----------|---------|--------|---|------|--------|
+| **CMS X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | NOT_REJECTED | 0.40 | 0.50 | Real | **Validated** |
+| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | NOT_REJECTED | 0.42 | 1.69 | Sim | **Calibrated** |
+| **Belle Zb** | Zb(10610), Zb(10650) | πΥ(1S), πΥ(2S) | NOT_REJECTED | 0.83 | 0.27 | Sim | Prelim |
+| **LHCb Pc doublet** | Pc(4440), Pc(4457) | J/ψp (full), J/ψp (tight) | NOT_REJECTED | 0.34 | 1.83 | Sim | Prelim |
+| **Strange Pcs** | Pcs(4459), Pcs(4338) | J/ψΛ (primary), J/ψΛ (alt) | NOT_REJECTED | 0.18 | 3.19 | Sim | Prelim |
+| **BESIII Y** | Y(4220), Y(4320) | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.07 | 4.60 | Sim | Prelim |
+| **BESIII/Belle ISR Y** | Y(4260), Y(4360) | ISR π+π-J/ψ, ISR π+π-ψ(2S) | DISFAVORED | 0.03 | 7.26 | Sim | Prelim |
+| **BaBar ω (control)** | ω(1420), ω(1650) | ωπ+π-, ωf0 | NOT_REJECTED | 0.84 | 0.44 | Sim | Prelim |
+| **X(3872)** | ccqq | J/ψππ, D*D | NOT_REJECTED | 1.00 | 0.00 | Sim | Prelim |
 
-*Prelim = simulated data with realistic physics parameters; Validated = full calibration with Type-I/power analysis*
+*Data: Real = experimental data, Sim = simulated with realistic physics*
+*Status: Validated = real data + calibration, Calibrated = sim data + Type-I/power verified, Prelim = sim data only*
 
 ---
 
