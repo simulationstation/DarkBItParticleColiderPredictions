@@ -1,0 +1,4 @@
+family_id,category,status,gates,chi2_dof_A,chi2_dof_B,r_shared,phi_shared,Lambda_obs,p_boot,n_boot,verdict,expected,runtime_sec,error_msg
+belle_zb,exotic,COMPLETED,PASS,0.802,1.100,0.000,0.0,0.269,0.8300,100,NOT_REJECTED,SUPPORTED,746.2,
+lhcb_pc_doublet,exotic,COMPLETED,PASS,0.640,1.100,0.000,0.0,1.826,0.3400,100,NOT_REJECTED,SUPPORTED,712.7,
+strange_pcs,exotic,COMPLETED,PASS,1.050,1.219,0.000,0.0,3.194,0.1800,100,NOT_REJECTED,SUPPORTED,428.6,
