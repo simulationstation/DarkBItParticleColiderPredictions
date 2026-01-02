@@ -1,0 +1,53 @@
+============================================================
+BESIII Y(4220)/Y(4320) Rank-1 Factorization Test
+============================================================
+
+Channel A (pi+pi- J/psi): 10 points
+Channel B (pi+pi- hc): 30 points
+Energy window: 4.15 - 4.45 GeV
+
+[1/3] Fitting constrained model (shared R)...
+[2/3] Fitting unconstrained model (independent R)...
+
+--- Fit Results ---
+NLL constrained:   184.49
+NLL unconstrained: 18.68
+Lambda_obs:        331.6274
+
+Shared |R|: 0.666
+Shared arg(R): -2.55 rad (-146.3 deg)
+
+Channel A |R|: 0.435, arg(R): 174.2 deg
+Channel B |R|: 1.911, arg(R): 83.0 deg
+
+--- Fit Health ---
+chi2/dof (A): 24.930
+chi2/dof (B): 9.774
+
+[3/3] Running bootstrap (200 replicates)...
+
+============================================================
+RESULT
+============================================================
+Lambda_obs: 331.6274
+p_boot:     0.1350 (27/200 exceedances)
+p_chi2(2):  0.0000
+Gates:      FAIL
+Verdict:    INCONCLUSIVE
+Traceback (most recent call last):
+  File "/home/primary/DarkBItParticleColiderPredictions/besiii_y_rank1/src/besiii_y_rank1_test.py", line 392, in <module>
+    main()
+  File "/home/primary/DarkBItParticleColiderPredictions/besiii_y_rank1/src/besiii_y_rank1_test.py", line 352, in main
+    json.dump(result, f, indent=2)
+  File "/usr/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool_ is not JSON serializable
