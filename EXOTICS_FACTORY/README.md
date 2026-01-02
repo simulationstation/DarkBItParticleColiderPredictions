@@ -7,6 +7,7 @@ The **Exotics Rank-1 Test Factory** provides scaffolding for exotic-family rank-
 - `registry/`: registry of all pipelines and schema documentation.
 - `toolkit/`: shared utilities for validation, backends, modeling, and reporting.
 - `families/`: one folder per exotic/control family with specs and pipeline stubs.
+- `cmssw_synth/`: CMSSW GEN-only synthetic backend templates (SYNTHETIC).
 - `launcher.py`: master launcher (dry-run default).
 - `SMOKE_PLAN.md`: minimal smoke test plan (not executed here).
 
@@ -18,7 +19,6 @@ The **Exotics Rank-1 Test Factory** provides scaffolding for exotic-family rank-
 - `strange_pcs`: Pcs(4459) shared-shape proxy with HEPData/PDF placeholders.
 - `besiii_y_pipijpsi_hc`: BESIII pi pi J/psi vs pi pi hc shared-subspace with 3 vs 2 resonance allowance.
 - `besiii_belle_isr_y`: ISR pi pi J/psi vs pi pi psi(2S) (underconstrained risk flagged).
-- `cms_atlas_dicharmonium_other`: Other di-charmonium structures (skeleton only).
 - `x3872_like`: X(3872) shared-shape with workspace preferred.
 
 ### Control families (negative controls)
@@ -32,3 +32,12 @@ python EXOTICS_FACTORY/launcher.py --family belle_zb
 ```
 
 Use `--run` only after supplying real data sources and verifying the pipeline.
+
+### CMSSW synthetic backend (dry-run)
+
+```bash
+python EXOTICS_FACTORY/launcher.py --family belle_zb --backend cmssw_synth
+```
+
+All CMSSW synthetic scripts default to **DRY_RUN** and refuse to execute unless
+explicitly invoked with `--run` or `RUN=1`.

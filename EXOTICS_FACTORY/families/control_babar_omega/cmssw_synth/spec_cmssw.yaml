@@ -1,0 +1,47 @@
+schema_version: "1.0"
+family_id: control_babar_omega
+cmssw:
+  release: CMSSW_14_0_13
+  generator_fragment: EXOTICS_FACTORY/cmssw_synth/generators/control_babar_omega_gen.py
+  generator_fragment_family: EXOTICS_FACTORY/families/control_babar_omega/cmssw_synth/gen_fragment.py
+  analyzer_module: EXOTICS_FACTORY/cmssw_synth/analyzers/gen_mass_spectra.py
+  analyzer_script: EXOTICS_FACTORY/families/control_babar_omega/cmssw_synth/analyze_gen.py
+  event_count: 50000
+outputs:
+  output_dir: EXOTICS_FACTORY/out/cmssw_synth/control_babar_omega
+  label: SYNTHETIC
+runtime:
+  steps:
+    - setup_cmssw
+    - run_gen_only
+    - run_analyzer
+    - emit_synthetic_csvs
+channels:
+  - name: omega_f0
+    label: "e+e- -> omega f0 (proxy)"
+    pdg_groups:
+      - ids: [223]
+        abs: false
+      - ids: [9010221]
+        abs: false
+    combination: pair
+    binning:
+      min: 1.20
+      max: 2.10
+      bins: 80
+    output_csv: control_babar_omega_omega_f0_SYNTHETIC.csv
+  - name: omega_pipi
+    label: "e+e- -> omega pi pi (proxy)"
+    pdg_groups:
+      - ids: [223]
+        abs: false
+      - ids: [211]
+        abs: false
+      - ids: [-211]
+        abs: false
+    combination: multi
+    binning:
+      min: 1.20
+      max: 2.10
+      bins: 80
+    output_csv: control_babar_omega_omega_pipi_SYNTHETIC.csv

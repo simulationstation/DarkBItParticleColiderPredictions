@@ -1,0 +1,84 @@
+schema_version: "1.0"
+family_id: belle_zb
+cmssw:
+  release: CMSSW_14_0_13
+  generator_fragment: EXOTICS_FACTORY/cmssw_synth/generators/belle_zb_gen.py
+  generator_fragment_family: EXOTICS_FACTORY/families/belle_zb/cmssw_synth/gen_fragment.py
+  analyzer_module: EXOTICS_FACTORY/cmssw_synth/analyzers/gen_mass_spectra.py
+  analyzer_script: EXOTICS_FACTORY/families/belle_zb/cmssw_synth/analyze_gen.py
+  event_count: 50000
+outputs:
+  output_dir: EXOTICS_FACTORY/out/cmssw_synth/belle_zb
+  label: SYNTHETIC
+runtime:
+  steps:
+    - setup_cmssw
+    - run_gen_only
+    - run_analyzer
+    - emit_synthetic_csvs
+channels:
+  - name: upsilon1s_pi
+    label: "pi± Upsilon(1S)"
+    pdg_groups:
+      - ids: [553]
+        abs: false
+      - ids: [211]
+        abs: true
+    combination: pair
+    binning:
+      min: 10.40
+      max: 10.80
+      bins: 80
+    output_csv: belle_zb_upsilon1s_pi_SYNTHETIC.csv
+  - name: upsilon2s_pi
+    label: "pi± Upsilon(2S)"
+    pdg_groups:
+      - ids: [100553]
+        abs: false
+      - ids: [211]
+        abs: true
+    combination: pair
+    binning:
+      min: 10.40
+      max: 10.80
+      bins: 80
+    output_csv: belle_zb_upsilon2s_pi_SYNTHETIC.csv
+  - name: upsilon3s_pi
+    label: "pi± Upsilon(3S)"
+    pdg_groups:
+      - ids: [200553]
+        abs: false
+      - ids: [211]
+        abs: true
+    combination: pair
+    binning:
+      min: 10.40
+      max: 10.80
+      bins: 80
+    output_csv: belle_zb_upsilon3s_pi_SYNTHETIC.csv
+  - name: hb1p_pi
+    label: "pi± hb(1P)"
+    pdg_groups:
+      - ids: [10513]
+        abs: false
+      - ids: [211]
+        abs: true
+    combination: pair
+    binning:
+      min: 10.40
+      max: 10.80
+      bins: 80
+    output_csv: belle_zb_hb1p_pi_SYNTHETIC.csv
+  - name: hb2p_pi
+    label: "pi± hb(2P)"
+    pdg_groups:
+      - ids: [20513]
+        abs: false
+      - ids: [211]
+        abs: true
+    combination: pair
+    binning:
+      min: 10.40
+      max: 10.80
+      bins: 80
+    output_csv: belle_zb_hb2p_pi_SYNTHETIC.csv

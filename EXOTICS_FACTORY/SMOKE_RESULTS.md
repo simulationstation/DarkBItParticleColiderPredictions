@@ -5,7 +5,7 @@
 
 ## Summary
 
-- **Families tested**: 9/9
+- **Families tested**: 8/8
 - **Syntax errors**: 0
 - **Schema errors**: 0
 - **Launcher failures**: 0
@@ -18,7 +18,6 @@
 | belle_zb | PASS | PASS | PASS | SKIPPED (needs network) | No issues |
 | besiii_belle_isr_y | PASS | PASS | PASS | SKIPPED (needs network) | No issues |
 | besiii_y_pipijpsi_hc | PASS | PASS | PASS | SKIPPED (needs network) | No issues |
-| cms_atlas_dicharmonium_other | PASS | PASS | PASS | SKIPPED (needs network) | No issues |
 | control_babar_omega | PASS | PASS | PASS | SKIPPED (needs network) | No issues |
 | control_babar_phi | PASS | PASS | PASS | SKIPPED (needs network) | No issues |
 | lhcb_pc_doublet | PASS | PASS | PASS | SKIPPED (needs network) | No issues |
@@ -30,7 +29,7 @@
 | Component | Test | Result | Notes |
 |-----------|------|--------|-------|
 | Python syntax | `py_compile` all .py | PASS | 0 errors |
-| Schema validator | All spec.yaml files | PASS | 9/9 valid |
+| Schema validator | All spec.yaml files | PASS | 8/8 valid |
 | Launcher | Dry-run mode | PASS | All families print plan and exit 0 |
 | Harness wrapper | Command builder | PASS | Correctly builds command list |
 | PDF backend | Graceful failure | PASS | Returns empty list on missing file |

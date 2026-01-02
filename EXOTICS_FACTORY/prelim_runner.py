@@ -28,7 +28,6 @@ ALL_FAMILIES = [
     "strange_pcs",
     "besiii_y_pipijpsi_hc",
     "besiii_belle_isr_y",
-    "cms_atlas_dicharmonium_other",
     "control_babar_omega",
     "control_babar_phi",
     "x3872_like",
