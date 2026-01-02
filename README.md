@@ -4,17 +4,6 @@
 
 ---
 
-## Passed Tests
-
-| Test | States | Channels | Lambda | p-value | Verdict |
-|------|--------|----------|--------|---------|---------|
-| CMS Di-charmonium | X(6900), X(7100) | J/ψJ/ψ vs J/ψψ(2S) | 0.50 | 0.40 | **NOT REJECTED** |
-| Validation Trial (M0) | X(6900), X(7100) | J/ψJ/ψ vs J/ψψ(2S) | 0.33 | 0.89 | **NOT REJECTED** |
-
-Both tests support rank-1 factorization: the exotic states share a common production mechanism across decay channels.
-
----
-
 ## Latest Result: CMS X(6900)/X(7100)
 
 ### Verdict: **NOT_REJECTED** (p = 0.40)
@@ -58,40 +47,6 @@ The complex coupling ratio R = g(X7100)/g(X6900) is **consistent with being shar
 ![Channel B Extraction](cms_x6900_rank1_v4/out/debug_channelB_overlay.png)
 
 *Left: Original CMS-PAS-BPH-22-004 Figure 2. Right: Extracted J/ψψ(2S) spectrum with X(6900) and X(7100) positions marked.*
-
----
-
-## Validation Status: Almost Complete
-
-**Di-charmonium (X(6900)/X(7100)) Statistical Validation**
-
-The rank-1 test harness is undergoing rigorous Monte Carlo validation to ensure correct Type-I error rates and statistical power.
-
-### Power Analysis Results (Complete)
-
-| Statistics Level | Type-I Error (M0) | Power (M1) |
-|-----------------|-------------------|------------|
-| 0.5x | 2.7% | 71.3% |
-| 1.0x | 7.3% | 98.7% |
-| 2.0x | 7.3% | 100% |
-
-- **M0**: Rank-1 true (shared R) - measures false positive rate
-- **M1**: Rank-1 false (different R per channel) - measures detection power
-- Target Type-I: 5% (within tolerance)
-
-### M4 Grid Analysis (In Progress)
-
-Testing detectability across parameter space (dr, dphi deviations from rank-1).
-
-### Single Trial Verification
-
-```
-Test: Di-charmonium (J/ψJ/ψ vs J/ψψ(2S))
-Lambda_obs: 0.3334
-p_boot: 0.89
-Gates: PASS
-Verdict: Rank-1 NOT rejected (correct under M0)
-```
 
 ---
 
