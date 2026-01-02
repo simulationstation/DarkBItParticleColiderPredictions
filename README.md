@@ -1,6 +1,26 @@
 # Exotic Hadron Rank-1 Factorization Tests
 
-**Testing whether exotic tetraquark states share a common production mechanism across decay channels**
+## Abstract
+
+We test an amplitude-level organizing hypothesis for exotic-hadron families observed across multiple channels: a rank-1 bottleneck (factorization) law for state-to-channel couplings. Over a shared two-state subspace, the hypothesis predicts a channel-invariant complex mixture ratio. We implement a strict inference protocol—constrained vs unconstrained likelihood-ratio testing, parametric bootstrap p-values, fit-health gates (including a lower χ²/dof bound to prevent underconstrained false passes), and optimizer stability audits—and apply it to the CMS all-charm structures X(6900) and X(7100) across (A) di-J/ψ (HEPData) and (B) J/ψψ(2S) → 4μ (public-figure reconstruction with extraction diagnostics). The shared complex ratio constraint is not rejected: Λ = 0.50 with p_boot = 0.3987 (319/800 exceedances), with both channels fit-healthy (χ²/dof = 1.21 and 1.91). Separately, we report method validation in a Zc-like two-channel synthetic benchmark (not a real-data claim): under rank-1 true, the pipeline achieves Type-I error in the few-percent range and high power against rank-1 false under the same gates and bootstrap protocol. We emphasize that only the CMS result is an empirical cross-channel test; the Zc benchmark is included to demonstrate that the protocol behaves as a calibrated statistical instrument. The dominant limitation of the CMS result is public data fidelity for channel (B); we are awaiting CERN/collaboration-provided binned tables or fit workspaces to upgrade the preliminary table-to-figure reconstruction into a table-to-table replication.
+
+---
+
+## Exotic Families Status
+
+| Family | States | Channels | Verdict | p_boot | Λ | Status |
+|--------|--------|----------|---------|--------|---|--------|
+| **CMS X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | NOT_REJECTED | 0.40 | 0.50 | **Validated** |
+| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | NOT_REJECTED | 0.42 | 1.69 | **Validated** |
+| **Belle Zb** | Zb(10610), Zb(10650) | πΥ(1S), πΥ(2S) | NOT_REJECTED | 0.83 | 0.27 | **Prelim** |
+| **LHCb Pc doublet** | Pc(4440), Pc(4457) | J/ψp (full), J/ψp (tight) | NOT_REJECTED | 0.34 | 1.83 | **Prelim** |
+| **Strange Pcs** | Pcs(4459), Pcs(4338) | J/ψΛ (primary), J/ψΛ (alt) | NOT_REJECTED | 0.18 | 3.19 | **Prelim** |
+| **BESIII Y** | Y(4220), Y(4320) | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.07 | 4.60 | **Prelim** |
+| **BESIII/Belle ISR Y** | Y(4260), Y(4360) | ISR π+π-J/ψ, ISR π+π-ψ(2S) | DISFAVORED | 0.03 | 7.26 | **Prelim** |
+| **BaBar ω (control)** | ω(1420), ω(1650) | ωπ+π-, ωf0 | NOT_REJECTED | 0.84 | 0.44 | **Prelim** |
+| X(3872) | ccqq | J/ψππ, D*D | - | - | - | Pending |
+
+*Prelim = simulated data with realistic physics parameters; Validated = full calibration with Type-I/power analysis*
 
 ---
 
@@ -242,26 +262,6 @@ DarkBItParticleColiderPredictions/
 │
 └── [other analyses...]          # Previous/parallel tests
 ```
-
----
-
-## Exotic Families Status
-
-| Family | States | Channels | Verdict | p_boot | Λ | Status |
-|--------|--------|----------|---------|--------|---|--------|
-| **X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | NOT_REJECTED | 0.40 | 0.50 | **Validated** |
-| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | NOT_REJECTED | 0.42 | 1.69 | **Validated** |
-| **Belle Zb** | Zb(10610), Zb(10650) | πΥ(1S), πΥ(2S) | NOT_REJECTED | 0.83 | 0.27 | **Prelim** |
-| **LHCb Pc doublet** | Pc(4440), Pc(4457) | J/ψp (full), J/ψp (tight) | NOT_REJECTED | 0.34 | 1.83 | **Prelim** |
-| **Strange Pcs** | Pcs(4459), Pcs(4338) | J/ψΛ (primary), J/ψΛ (alt) | NOT_REJECTED | 0.18 | 3.19 | **Prelim** |
-| **BESIII Y** | Y(4220), Y(4320) | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.07 | 4.60 | **Prelim** |
-| **BESIII/Belle ISR Y** | Y(4260), Y(4360) | ISR π+π-J/ψ, ISR π+π-ψ(2S) | DISFAVORED | 0.03 | 7.26 | **Prelim** |
-| X(3872) | ccqq | J/ψππ, D*D | - | - | - | Pending |
-
-Each analysis uses the same publication-grade harness with:
-- Official HEPData where available
-- Vector extraction from figures as fallback
-- Bootstrap p-values with fit-health validation
 
 ---
 
