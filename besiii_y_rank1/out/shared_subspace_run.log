@@ -1,0 +1,55 @@
+Loaded 15 points for channel A
+Loaded 42 points for channel B
+======================================================================
+BESIII Y(4220)/Y(4320) Shared-Subspace Rank-1 Test
+======================================================================
+
+Channel A (π+π-J/ψ): 15 points
+Channel B (π+π-hc): 42 points
+Energy window: [4.01, 4.60] GeV
+Model: |BW1 + R×BW2 + C3×BW3|² + B(√s)
+
+----------------------------------------------------------------------
+PHASE 1: FIXED_SHAPES mode
+----------------------------------------------------------------------
+
+[1/4] Fitting CONSTRAINED model (shared R)...
+[2/4] Fitting UNCONSTRAINED model (independent R)...
+
+--- Fit Results (FIXED_SHAPES) ---
+NLL constrained:   37.78
+NLL unconstrained: 36.28
+chi²/dof (A): 2.352 -> HEALTHY
+chi²/dof (B): 1.738 -> HEALTHY
+Lambda_obs: 2.9959
+
+Shared R: |R| = 0.754, φ = 168.4°
+Channel A R: |R| = 0.611, φ = 170.6°
+Channel B R: |R| = 1.421, φ = -117.6°
+
+[3/4] Checking identifiability...
+Identifiable: True (TOO_FEW_SOLUTIONS)
+
+[4/4] Running bootstrap (200 replicates)...
+p_boot = 0.3950 (79/200 exceedances)
+
+======================================================================
+FINAL RESULT
+======================================================================
+Fit mode: FIXED_SHAPES
+chi²/dof (A): 2.352 [HEALTHY]
+chi²/dof (B): 1.738 [HEALTHY]
+Lambda_obs: 2.9959
+p_boot: 0.3950 (79/200)
+Identifiable: True
+VERDICT: NOT_REJECTED
+Traceback (most recent call last):
+  File "/home/primary/DarkBItParticleColiderPredictions/besiii_y_rank1/src/besiii_y_rank1_shared_subspace.py", line 867, in <module>
+    main()
+  File "/home/primary/DarkBItParticleColiderPredictions/besiii_y_rank1/src/besiii_y_rank1_shared_subspace.py", line 857, in main
+    report = generate_report(result, data_A, data_B, outdir)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/primary/DarkBItParticleColiderPredictions/besiii_y_rank1/src/besiii_y_rank1_shared_subspace.py", line 735, in generate_report
+    | |R| | {result.r_shared:.4f if result.r_shared else 'N/A'} |
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Invalid format specifier '.4f if result.r_shared else 'N/A'' for object of type 'float'

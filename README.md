@@ -8,20 +8,30 @@ We test an amplitude-level organizing hypothesis for exotic-hadron families obse
 
 ## Exotic Families Status
 
-| Family | States | Channels | Verdict | p_boot | Λ | Data | Status |
-|--------|--------|----------|---------|--------|---|------|--------|
-| **CMS X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | NOT_REJECTED | 0.40 | 0.50 | Real | **Validated** |
-| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | NOT_REJECTED | 0.42 | 1.69 | Sim | **Calibrated** |
-| **Belle Zb** | Zb(10610), Zb(10650) | πΥ(1S), πΥ(2S) | NOT_REJECTED | 0.83 | 0.27 | Sim | Prelim |
-| **LHCb Pc doublet** | Pc(4440), Pc(4457) | J/ψp (full), J/ψp (tight) | NOT_REJECTED | 0.34 | 1.83 | Sim | Prelim |
-| **Strange Pcs** | Pcs(4459), Pcs(4338) | J/ψΛ (primary), J/ψΛ (alt) | NOT_REJECTED | 0.18 | 3.19 | Sim | Prelim |
-| **BESIII Y** | Y(4220), Y(4320) | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.07 | 4.60 | Sim | Prelim |
-| **BESIII/Belle ISR Y** | Y(4260), Y(4360) | ISR π+π-J/ψ, ISR π+π-ψ(2S) | DISFAVORED | 0.03 | 7.26 | Sim | Prelim |
-| **BaBar ω (control)** | ω(1420), ω(1650) | ωπ+π-, ωf0 | NOT_REJECTED | 0.84 | 0.44 | Sim | Prelim |
-| **X(3872)** | ccqq | J/ψππ, D*D | NOT_REJECTED | 1.00 | 0.00 | Sim | Prelim |
+### Real Data Results
 
-*Data: Real = experimental data, Sim = simulated with realistic physics*
-*Status: Validated = real data + calibration, Calibrated = sim data + Type-I/power verified, Prelim = sim data only*
+| Family | States | Channels | Verdict | p_boot | Λ | Source |
+|--------|--------|----------|---------|--------|---|--------|
+| **CMS X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | NOT_REJECTED | 0.40 | 0.50 | HEPData + CDS |
+| **BESIII Y(4220)/Y(4320)** | charmonium-like | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.40 | 3.00 | arXiv + HEPData |
+
+### Simulated Pipeline Results
+
+| Family | States | Channels | Verdict | p_boot | Λ | Status |
+|--------|--------|----------|---------|--------|---|--------|
+| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | NOT_REJECTED | 0.42 | 1.69 | **Calibrated** |
+| **Belle Zb** | Zb(10610), Zb(10650) | πΥ(1S), πΥ(2S) | NOT_REJECTED | 0.83 | 0.27 | Prelim |
+| **LHCb Pc doublet** | Pc(4440), Pc(4457) | J/ψp (full), J/ψp (tight) | NOT_REJECTED | 0.34 | 1.83 | Prelim |
+| **Strange Pcs** | Pcs(4459), Pcs(4338) | J/ψΛ (primary), J/ψΛ (alt) | NOT_REJECTED | 0.18 | 3.19 | Prelim |
+| **BESIII Y (sim)** | Y(4220), Y(4320) | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.07 | 4.60 | Prelim |
+| **BESIII/Belle ISR Y** | Y(4260), Y(4360) | ISR π+π-J/ψ, ISR π+π-ψ(2S) | DISFAVORED | 0.03 | 7.26 | Prelim |
+| **BaBar ω (control)** | ω(1420), ω(1650) | ωπ+π-, ωf0 | NOT_REJECTED | 0.84 | 0.44 | Prelim |
+| **X(3872)** | ccqq | J/ψππ, D*D | NOT_REJECTED | 1.00 | 0.00 | Prelim |
+
+**Real Data**: Extracted from published experimental results (HEPData, arXiv PDFs, CDS figures)
+**Simulated**: Generated using physics-based simulators calibrated to CERN's official codebase parameters
+
+*Status: Calibrated = Type-I/power verified, Prelim = pipeline tested only*
 
 ---
 
@@ -52,6 +62,54 @@ The complex coupling ratio R = g(X7100)/g(X6900) is **consistent with being shar
 |---------|----------|--------|
 | A (J/ψJ/ψ) | 1.21 | HEALTHY |
 | B (J/ψψ(2S)) | 1.91 | HEALTHY |
+
+---
+
+## Result: BESIII Y(4220)/Y(4320) (Real Data)
+
+### Verdict: **NOT_REJECTED** (p = 0.40)
+
+The complex coupling ratio R = g(Y4320)/g(Y4220) is **consistent with being shared** between the π+π-J/ψ and π+π-hc decay channels, supporting a common production mechanism.
+
+| Metric | Value |
+|--------|-------|
+| Lambda (test statistic) | 3.00 |
+| Bootstrap p-value | 0.395 (79/200 exceedances) |
+| chi²/dof (J/ψ) | 2.35 [HEALTHY] |
+| chi²/dof (hc) | 1.74 [HEALTHY] |
+| Model | Shared-subspace (3 BW + poly background) |
+
+### Coupling Ratios
+
+| Channel | \|R\| | arg(R) |
+|---------|-------|--------|
+| **Shared** | **0.75** | **168°** |
+| π+π-J/ψ (A) | 0.61 | 171° |
+| π+π-hc (B) | 1.42 | -118° |
+
+### Cross-Section Line Shapes (Real Data)
+
+![BESIII Y Line Shapes](besiii_y_rank1/out/besiii_y_lineshapes.png)
+
+*Left: π+π-J/ψ channel (15 points from arXiv:1611.01317). Right: π+π-hc channel (42 points from HEPData ins2908630). Red curves show the shared-subspace fit with Y(4220), Y(4320), and Y(4420) resonances.*
+
+### Bootstrap Lambda Distribution
+
+![BESIII Y Bootstrap](besiii_y_rank1/out/besiii_y_bootstrap.png)
+
+*The observed Λ = 3.00 (red dashed) is well below the χ²(2) 95% threshold (5.99, orange dotted). 40% of bootstrap replicates exceeded the observed value.*
+
+### Summary
+
+![BESIII Y Summary](besiii_y_rank1/out/besiii_y_summary.png)
+
+*Complete analysis summary showing both channels' cross-sections, bootstrap distribution, and final verdict.*
+
+### Physics Implications
+
+- Y(4220) and Y(4320) may arise from a common underlying structure
+- Supports molecular or tetraquark interpretations where both states share dynamics
+- The consistent coupling ratio across J/ψ and hc final states suggests similar production mechanisms
 
 ---
 
@@ -237,13 +295,24 @@ docker_cmssw_rank1/configs/RANK1_HARNESS_README.md
 - CMS Collaboration, "Observation of new structure in the J/ψJ/ψ mass spectrum", PRL 132 (2024) 111901
 - CMS-PAS-BPH-22-004, "Study of J/ψψ(2S) and J/ψJ/ψ production"
 
+### BESIII Y(4220)/Y(4320) Analysis
+
+| Channel | Source | Record |
+|---------|--------|--------|
+| π+π-J/ψ | arXiv | [1611.01317](https://arxiv.org/abs/1611.01317) |
+| π+π-hc | HEPData | [ins2908630](https://www.hepdata.net/record/ins2908630) |
+
+**Publications**:
+- BESIII Collaboration, "Precise measurement of the e+e- → π+π-J/ψ cross section", Phys. Rev. Lett. 118 (2017) 092001
+- BESIII Collaboration, "Observation of e+e- → π+π-hc and search for Zc(4020)±", Phys. Rev. D (2025)
+
 ---
 
 ## Directory Structure
 
 ```
 DarkBItParticleColiderPredictions/
-├── cms_x6900_rank1_v4/          # Current CMS analysis
+├── cms_x6900_rank1_v4/          # CMS tetraquark analysis (real data)
 │   ├── data/
 │   │   ├── hepdata/             # Official HEPData downloads
 │   │   └── cds/                 # CDS figure files
@@ -256,12 +325,31 @@ DarkBItParticleColiderPredictions/
 │   ├── src/                     # Extraction scripts
 │   └── logs/                    # Command history
 │
+├── besiii_y_rank1/              # BESIII Y(4220)/Y(4320) analysis (real data)
+│   ├── data/
+│   │   ├── hepdata/             # HEPData hc cross-section tables
+│   │   └── pdf/                 # arXiv PDF for J/ψ extraction
+│   ├── extracted/               # Processed CSV files
+│   │   ├── channelA_jpsi_xsec.csv
+│   │   └── channelB_hc_xsec.csv
+│   ├── out/                     # Results and plots
+│   │   ├── shared_subspace_result.json
+│   │   ├── besiii_y_lineshapes.png
+│   │   ├── besiii_y_bootstrap.png
+│   │   └── besiii_y_summary.png
+│   ├── src/                     # Analysis scripts
+│   │   ├── besiii_y_rank1_shared_subspace.py
+│   │   └── generate_figures.py
+│   ├── REPORT.md                # Initial 2-BW report (inconclusive)
+│   └── REPORT_shared_subspace.md # Final shared-subspace report
+│
 ├── docker_cmssw_rank1/configs/  # Rank-1 test harness (v2.0)
 │   ├── cms_rank1_test.py        # Main harness
 │   ├── rank1_injection.py       # Validation framework
 │   └── RANK1_HARNESS_README.md  # Documentation
 │
-└── [other analyses...]          # Previous/parallel tests
+└── FIX_THESE/                   # Simulated pipeline tests
+    └── [Zc, Zb, Pc, etc.]       # Calibrated simulators
 ```
 
 ---
@@ -316,6 +404,41 @@ python3 run_power_analysis.py --tests zclike --trials-m0 100 --trials-m1 100 --b
 ```
 
 Output: `out/POWER_ZCLIKE.md` with Type-I error and power results
+
+---
+
+## How to Reproduce: BESIII Y(4220)/Y(4320)
+
+### Prerequisites
+
+```bash
+pip install numpy scipy matplotlib
+```
+
+### Generate Figures (from saved results)
+
+```bash
+cd besiii_y_rank1
+python3 src/generate_figures.py
+```
+
+Output:
+- `out/besiii_y_lineshapes.png` - Cross-section fits for both channels
+- `out/besiii_y_bootstrap.png` - Bootstrap Lambda distribution
+- `out/besiii_y_summary.png` - Complete analysis summary
+
+### Re-run Full Analysis (optional)
+
+```bash
+cd besiii_y_rank1
+nohup python3 -u src/besiii_y_rank1_shared_subspace.py > out/run.log 2>&1 &
+tail -f out/run.log
+```
+
+### Data Files
+
+- `extracted/channelA_jpsi_xsec.csv` - π+π-J/ψ cross-section from arXiv:1611.01317
+- `extracted/channelB_hc_xsec.csv` - π+π-hc cross-section from HEPData ins2908630
 
 ---
 
