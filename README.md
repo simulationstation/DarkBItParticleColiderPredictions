@@ -50,6 +50,18 @@ The complex coupling ratio R = g(X7100)/g(X6900) is **consistent with being shar
 | A | πJ/ψ |
 | B | DD* |
 
+### Bootstrap Distribution
+
+![Zc Bootstrap Distribution](FIX_THESE/out/zc_bootstrap_hist.png)
+
+*The observed Lambda (1.79, red dashed) is well below the chi²(2) rejection threshold (5.99, orange dotted).*
+
+### Channel Spectra
+
+![Zc Channel Spectra](FIX_THESE/out/zc_channel_spectra.png)
+
+*Left: πJ/ψ channel. Right: DD* channel.*
+
 *Note: Calibration passed (Type-I 4.2%, KS p=0.91). Full validation pending.*
 
 ---
