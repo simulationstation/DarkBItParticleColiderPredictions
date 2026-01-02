@@ -247,13 +247,16 @@ DarkBItParticleColiderPredictions/
 
 ## Exotic Families Status
 
-| Family | States | Channels | Status |
-|--------|--------|----------|--------|
-| **X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | **Validated** |
-| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | **Validated** |
-| Pc pentaquarks | Pc(4312), Pc(4440), Pc(4457) | J/ψp | Planned |
-| Y states | Y(4260), Y(4360) | J/ψππ, ψ(2S)ππ | Planned |
-| X(3872) | ccqq | J/ψππ, D*D | Planned |
+| Family | States | Channels | Verdict | p_boot | Λ | Status |
+|--------|--------|----------|---------|--------|---|--------|
+| **X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | NOT_REJECTED | 0.40 | 0.50 | **Validated** |
+| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | NOT_REJECTED | 0.42 | 1.69 | **Validated** |
+| **Belle Zb** | Zb(10610), Zb(10650) | πΥ(1S), πΥ(2S) | NOT_REJECTED | 0.83 | 0.27 | **Prelim** |
+| **LHCb Pc doublet** | Pc(4440), Pc(4457) | J/ψp (full), J/ψp (tight) | NOT_REJECTED | 0.34 | 1.83 | **Prelim** |
+| **Strange Pcs** | Pcs(4459), Pcs(4338) | J/ψΛ (primary), J/ψΛ (alt) | NOT_REJECTED | 0.18 | 3.19 | **Prelim** |
+| **BESIII Y** | Y(4220), Y(4320) | π+π-J/ψ, π+π-hc | NOT_REJECTED | 0.07 | 4.60 | **Prelim** |
+| **BESIII/Belle ISR Y** | Y(4260), Y(4360) | ISR π+π-J/ψ, ISR π+π-ψ(2S) | DISFAVORED | 0.03 | 7.26 | **Prelim** |
+| X(3872) | ccqq | J/ψππ, D*D | - | - | - | Pending |
 
 Each analysis uses the same publication-grade harness with:
 - Official HEPData where available
