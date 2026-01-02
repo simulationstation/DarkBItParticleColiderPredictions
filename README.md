@@ -235,22 +235,73 @@ DarkBItParticleColiderPredictions/
 
 ---
 
-## Coming Soon: Other Exotic Families
-
-The rank-1 factorization test will be extended to other exotic hadron families:
+## Exotic Families Status
 
 | Family | States | Channels | Status |
 |--------|--------|----------|--------|
-| **X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | **Complete** |
+| **X(6900)/X(7100)** | cccc tetraquark | J/ψJ/ψ, J/ψψ(2S) | **Validated** |
+| **Zc states** | Zc(3900), Zc(4020) | πJ/ψ, DD* | **Validated** |
 | Pc pentaquarks | Pc(4312), Pc(4440), Pc(4457) | J/ψp | Planned |
-| Zc states | Zc(3900), Zc(4020) | J/ψπ, hcπ | Planned |
 | Y states | Y(4260), Y(4360) | J/ψππ, ψ(2S)ππ | Planned |
 | X(3872) | ccqq | J/ψππ, D*D | Planned |
 
-Each analysis will use the same publication-grade harness with:
+Each analysis uses the same publication-grade harness with:
 - Official HEPData where available
 - Vector extraction from figures as fallback
 - Bootstrap p-values with fit-health validation
+
+---
+
+## How to Reproduce: Zc States
+
+### Prerequisites
+
+```bash
+pip install numpy scipy matplotlib
+```
+
+### Run the Zc Rank-1 Test
+
+```bash
+cd FIX_THESE
+python3 -c "
+import json
+from sim_generate import generate_dataset
+from sim_fit_v3 import run_calibration_trial
+
+with open('tests_top3.json') as f:
+    config = json.load(f)
+
+zc_config = config['tests'][1]  # Zc-like
+dataset = generate_dataset(zc_config, 'M0', scale_factor=1.0, seed=123)
+result = run_calibration_trial(dataset, n_bootstrap=100, n_starts=60)
+
+print(f'Lambda_obs: {result[\"lambda_obs\"]:.4f}')
+print(f'p_boot: {result[\"p_boot\"]:.4f}')
+print(f'Gates: {result[\"gates\"]}')
+print(f'Rejected: {result[\"rejected\"]}')
+"
+```
+
+### Generate Figures
+
+```bash
+cd FIX_THESE
+python3 generate_zc_figures.py
+```
+
+Output:
+- `out/zc_bootstrap_hist.png` - Bootstrap Lambda distribution
+- `out/zc_channel_spectra.png` - Channel A (πJ/ψ) and Channel B (DD*) spectra
+
+### Run Validation (Power Analysis)
+
+```bash
+cd FIX_THESE
+python3 run_power_analysis.py --tests zclike --trials-m0 100 --trials-m1 100 --bootstrap 80 --starts 40 --outdir out
+```
+
+Output: `out/POWER_ZCLIKE.md` with Type-I error and power results
 
 ---
 
