@@ -4,6 +4,17 @@
 
 ---
 
+## Passed Tests
+
+| Test | States | Channels | Lambda | p-value | Verdict |
+|------|--------|----------|--------|---------|---------|
+| CMS Di-charmonium | X(6900), X(7100) | J/ψJ/ψ vs J/ψψ(2S) | 0.50 | 0.40 | **NOT REJECTED** |
+| Validation Trial (M0) | X(6900), X(7100) | J/ψJ/ψ vs J/ψψ(2S) | 0.33 | 0.89 | **NOT REJECTED** |
+
+Both tests support rank-1 factorization: the exotic states share a common production mechanism across decay channels.
+
+---
+
 ## Latest Result: CMS X(6900)/X(7100)
 
 ### Verdict: **NOT_REJECTED** (p = 0.40)
