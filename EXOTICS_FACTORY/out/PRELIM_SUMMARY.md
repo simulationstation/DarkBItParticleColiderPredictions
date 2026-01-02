@@ -1,6 +1,6 @@
 # Preliminary Fit Summary
 
-**Total families processed**: 9
+**Total families processed**: 8
 
 ## Ready for Full Calibration
 
@@ -10,8 +10,6 @@
 
 - **lhcb_pc_doublet**: Request binned spectra from collaboration
   - Email draft: `EXOTICS_FACTORY/runs_prelim/lhcb_pc_doublet/out/EMAIL_REQUEST_DRAFT.txt`
-- **cms_atlas_dicharmonium_other**: Request binned spectra from collaboration
-  - Email draft: `EXOTICS_FACTORY/runs_prelim/cms_atlas_dicharmonium_other/out/EMAIL_REQUEST_DRAFT.txt`
 - **control_babar_omega**: Request binned spectra from collaboration
   - Email draft: `EXOTICS_FACTORY/runs_prelim/control_babar_omega/out/EMAIL_REQUEST_DRAFT.txt`
 

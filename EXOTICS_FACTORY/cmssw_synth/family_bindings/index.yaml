@@ -1,0 +1,17 @@
+bindings:
+  - family_id: belle_zb
+    spec: EXOTICS_FACTORY/families/belle_zb/cmssw_synth/spec_cmssw.yaml
+  - family_id: lhcb_pc_doublet
+    spec: EXOTICS_FACTORY/families/lhcb_pc_doublet/cmssw_synth/spec_cmssw.yaml
+  - family_id: strange_pcs
+    spec: EXOTICS_FACTORY/families/strange_pcs/cmssw_synth/spec_cmssw.yaml
+  - family_id: besiii_y_pipijpsi_hc
+    spec: EXOTICS_FACTORY/families/besiii_y_pipijpsi_hc/cmssw_synth/spec_cmssw.yaml
+  - family_id: besiii_belle_isr_y
+    spec: EXOTICS_FACTORY/families/besiii_belle_isr_y/cmssw_synth/spec_cmssw.yaml
+  - family_id: control_babar_phi
+    spec: EXOTICS_FACTORY/families/control_babar_phi/cmssw_synth/spec_cmssw.yaml
+  - family_id: control_babar_omega
+    spec: EXOTICS_FACTORY/families/control_babar_omega/cmssw_synth/spec_cmssw.yaml
+  - family_id: x3872_like
+    spec: EXOTICS_FACTORY/families/x3872_like/cmssw_synth/spec_cmssw.yaml

@@ -102,25 +102,6 @@ families:
     source_pointers:
       - "arXiv:1303.6604"
       - "arXiv:0707.3699"
-  - id: cms_atlas_dicharmonium_other
-    name: "CMS/ATLAS other di-charmonium families"
-    category: exotic
-    states:
-      - "di-J/psi structures"
-      - "4mu structures"
-    channels:
-      - "CMS di-J/psi"
-      - "ATLAS di-J/psi"
-    preferred_backends:
-      - hepdata
-      - pdf
-    model_class: two-bw-coherent
-    amplitude_level_requires:
-      - "publication-level mass spectrum tables or workspace"
-    proxy_only: true
-    source_pointers:
-      - "CMS PAS BPH-21-003 (placeholder)"
-      - "ATLAS-CONF-2023-XYZ (placeholder)"
   - id: control_babar_phi
     name: "BaBar control: phi(1680)/phi(2170)"
     category: control

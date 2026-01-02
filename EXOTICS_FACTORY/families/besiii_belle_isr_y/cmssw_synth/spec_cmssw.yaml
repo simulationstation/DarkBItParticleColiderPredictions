@@ -1,0 +1,49 @@
+schema_version: "1.0"
+family_id: besiii_belle_isr_y
+cmssw:
+  release: CMSSW_14_0_13
+  generator_fragment: EXOTICS_FACTORY/cmssw_synth/generators/besiii_belle_isr_y_gen.py
+  generator_fragment_family: EXOTICS_FACTORY/families/besiii_belle_isr_y/cmssw_synth/gen_fragment.py
+  analyzer_module: EXOTICS_FACTORY/cmssw_synth/analyzers/gen_mass_spectra.py
+  analyzer_script: EXOTICS_FACTORY/families/besiii_belle_isr_y/cmssw_synth/analyze_gen.py
+  event_count: 50000
+outputs:
+  output_dir: EXOTICS_FACTORY/out/cmssw_synth/besiii_belle_isr_y
+  label: SYNTHETIC
+runtime:
+  steps:
+    - setup_cmssw
+    - run_gen_only
+    - run_analyzer
+    - emit_synthetic_csvs
+channels:
+  - name: pipi_jpsi
+    label: "ISR pi+pi- J/psi (proxy)"
+    pdg_groups:
+      - ids: [443]
+        abs: false
+      - ids: [211]
+        abs: false
+      - ids: [-211]
+        abs: false
+    combination: multi
+    binning:
+      min: 4.00
+      max: 4.80
+      bins: 80
+    output_csv: besiii_belle_isr_y_pipi_jpsi_SYNTHETIC.csv
+  - name: pipi_psi2s
+    label: "ISR pi+pi- psi(2S) (proxy)"
+    pdg_groups:
+      - ids: [100443]
+        abs: false
+      - ids: [211]
+        abs: false
+      - ids: [-211]
+        abs: false
+    combination: multi
+    binning:
+      min: 4.00
+      max: 4.80
+      bins: 80
+    output_csv: besiii_belle_isr_y_pipi_psi2s_SYNTHETIC.csv

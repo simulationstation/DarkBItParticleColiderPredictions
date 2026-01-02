@@ -1,0 +1,45 @@
+schema_version: "1.0"
+family_id: strange_pcs
+cmssw:
+  release: CMSSW_14_0_13
+  generator_fragment: EXOTICS_FACTORY/cmssw_synth/generators/strange_pcs_gen.py
+  generator_fragment_family: EXOTICS_FACTORY/families/strange_pcs/cmssw_synth/gen_fragment.py
+  analyzer_module: EXOTICS_FACTORY/cmssw_synth/analyzers/gen_mass_spectra.py
+  analyzer_script: EXOTICS_FACTORY/families/strange_pcs/cmssw_synth/analyze_gen.py
+  event_count: 50000
+outputs:
+  output_dir: EXOTICS_FACTORY/out/cmssw_synth/strange_pcs
+  label: SYNTHETIC
+runtime:
+  steps:
+    - setup_cmssw
+    - run_gen_only
+    - run_analyzer
+    - emit_synthetic_csvs
+channels:
+  - name: jpsi_lambda_primary
+    label: "J/psi Lambda (primary)"
+    pdg_groups:
+      - ids: [443]
+        abs: false
+      - ids: [3122]
+        abs: true
+    combination: pair
+    binning:
+      min: 4.30
+      max: 4.70
+      bins: 80
+    output_csv: strange_pcs_jpsi_lambda_primary_SYNTHETIC.csv
+  - name: jpsi_lambda_alt
+    label: "J/psi Lambda (alternate selection proxy)"
+    pdg_groups:
+      - ids: [443]
+        abs: false
+      - ids: [3122]
+        abs: true
+    combination: pair
+    binning:
+      min: 4.30
+      max: 4.70
+      bins: 80
+    output_csv: strange_pcs_jpsi_lambda_alt_SYNTHETIC.csv

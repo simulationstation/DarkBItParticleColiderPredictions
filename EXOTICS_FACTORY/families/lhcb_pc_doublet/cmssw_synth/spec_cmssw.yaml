@@ -1,0 +1,58 @@
+schema_version: "1.0"
+family_id: lhcb_pc_doublet
+cmssw:
+  release: CMSSW_14_0_13
+  generator_fragment: EXOTICS_FACTORY/cmssw_synth/generators/lhcb_pc_doublet_gen.py
+  generator_fragment_family: EXOTICS_FACTORY/families/lhcb_pc_doublet/cmssw_synth/gen_fragment.py
+  analyzer_module: EXOTICS_FACTORY/cmssw_synth/analyzers/gen_mass_spectra.py
+  analyzer_script: EXOTICS_FACTORY/families/lhcb_pc_doublet/cmssw_synth/analyze_gen.py
+  event_count: 50000
+outputs:
+  output_dir: EXOTICS_FACTORY/out/cmssw_synth/lhcb_pc_doublet
+  label: SYNTHETIC
+runtime:
+  steps:
+    - setup_cmssw
+    - run_gen_only
+    - run_analyzer
+    - emit_synthetic_csvs
+channels:
+  - name: jpsi_p_full
+    label: "J/psi p (full selection proxy)"
+    pdg_groups:
+      - ids: [443]
+        abs: false
+      - ids: [2212]
+        abs: true
+    combination: pair
+    binning:
+      min: 4.20
+      max: 4.60
+      bins: 80
+    output_csv: lhcb_pc_doublet_jpsi_p_full_SYNTHETIC.csv
+  - name: jpsi_p_tight
+    label: "J/psi p (tight selection proxy)"
+    pdg_groups:
+      - ids: [443]
+        abs: false
+      - ids: [2212]
+        abs: true
+    combination: pair
+    binning:
+      min: 4.20
+      max: 4.60
+      bins: 80
+    output_csv: lhcb_pc_doublet_jpsi_p_tight_SYNTHETIC.csv
+  - name: jpsi_p_weighted
+    label: "J/psi p (weighted proxy)"
+    pdg_groups:
+      - ids: [443]
+        abs: false
+      - ids: [2212]
+        abs: true
+    combination: pair
+    binning:
+      min: 4.20
+      max: 4.60
+      bins: 80
+    output_csv: lhcb_pc_doublet_jpsi_p_weighted_SYNTHETIC.csv
