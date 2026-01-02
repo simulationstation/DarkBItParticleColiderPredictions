@@ -45,6 +45,16 @@ The complex coupling ratio R = g(X7100)/g(X6900) is **consistent with being shar
 | Gates | PASS |
 | Status | **Validated** |
 
+### Coupling Ratios (Simulated M0)
+
+| Channel | \|R\| | arg(R) |
+|---------|-------|--------|
+| **Shared** | **0.55** | **-1.05 rad (-60°)** |
+| πJ/ψ (A) | 0.55 | -1.05 rad |
+| DD* (B) | 0.55 | -1.05 rad |
+
+*Note: Simulated with rank-1 true (R_A = R_B by construction). Test correctly does not reject.*
+
 ### Validation Results
 
 | Stats | Type-I Error | Power |
