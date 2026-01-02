@@ -1,0 +1,30 @@
+{
+  "bb_star_coherent": {
+    "r": 0.4914744832577991,
+    "phi_deg": 124.38547973135103,
+    "chi2": 393.1103535375568,
+    "dof": 21,
+    "chi2_dof": 18.719540644645562,
+    "health": "MODEL_MISMATCH"
+  },
+  "bb_star_incoherent": {
+    "Y1": 0.1,
+    "Y2": 0.1,
+    "q": 1.0,
+    "chi2": 317109.7914013439,
+    "dof": 22,
+    "chi2_dof": 14414.081427333813,
+    "health": "MODEL_MISMATCH"
+  },
+  "b_star_b_star": {
+    "a": 0.1,
+    "chi2": 391098.2978975606,
+    "dof": 14,
+    "chi2_dof": 27935.59270696861,
+    "health": "MODEL_MISMATCH"
+  },
+  "phase_identifiable": false,
+  "phase_reason": "FIT_NOT_HEALTHY",
+  "primary_verdict": "MODEL_MISMATCH",
+  "verdict_reason": "BB*\u03c0 fit health: MODEL_MISMATCH"
+}

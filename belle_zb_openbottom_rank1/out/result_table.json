@@ -1,0 +1,66 @@
+{
+  "open_bottom_R": {
+    "Model-2_Solution1": {
+      "r": 0.2224970797449924,
+      "r_err": 0.09014338160928753,
+      "phi_deg": -14.896902673401405,
+      "phi_err_deg": 38.96113006889598
+    },
+    "Model-2_Solution2": {
+      "r": 0.4509876168016973,
+      "r_err": 0.10725273354678792,
+      "phi_deg": -93.39212060632418,
+      "phi_err_deg": 8.021409131831525
+    }
+  },
+  "hidden_bottom_avg": {
+    "r": 0.861709276844412,
+    "r_err": 0.09081081081081081,
+    "phi_deg": -3.427041916155213,
+    "phi_err_deg": 14.322999279019466
+  },
+  "cross_family_tests": {
+    "Model-2_Solution1": {
+      "chi2_complex": 23.805263574259392,
+      "p_complex": 6.772557403000867e-06,
+      "chi2_magnitude": 24.9561102312407,
+      "p_magnitude": 5.865035638263905e-07
+    },
+    "Model-2_Solution2": {
+      "chi2_complex": 66.20275445237775,
+      "p_complex": 4.218847493575595e-15,
+      "chi2_magnitude": 8.541488531385196,
+      "p_magnitude": 0.0034714163091194017
+    }
+  },
+  "detail_tests": {
+    "upsilon1s": {
+      "chi2": 1.3956327334315437,
+      "p": 0.23745616417181936,
+      "verdict": "CONSISTENT"
+    },
+    "upsilon2s": {
+      "chi2": 18.041953921430473,
+      "p": 2.160899626368895e-05,
+      "verdict": "TENSION"
+    },
+    "upsilon3s": {
+      "chi2": 16.127418347099713,
+      "p": 5.922044147377292e-05,
+      "verdict": "TENSION"
+    },
+    "hb1p": {
+      "chi2": 9.398760730224657,
+      "p": 0.0021713215848632172,
+      "verdict": "TENSION"
+    },
+    "hb2p": {
+      "chi2": 3.6038389570010527,
+      "p": 0.0576463081327927,
+      "verdict": "CONSISTENT"
+    }
+  },
+  "primary_verdict": "DISFAVORED",
+  "verdict_reason": "Magnitude test p = 0.000 < 0.05",
+  "physics_note": "Open-bottom |R| < hidden-bottom |R|: consistent with threshold enhancement of Zb(10610) in BB* channel"
+}
