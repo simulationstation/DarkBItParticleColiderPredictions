@@ -107,37 +107,84 @@ def _normalize_token(token: str) -> str:
     t = t.replace("ψ", "psi").replace("φ", "phi")
     t = t.replace("π", "pi").replace("γ", "gamma")
     t = t.replace("(", "").replace(")", "")
-    t = t.replace("+", "plus").replace("-", "minus")
+    t = t.replace("+", "plus").replace("-", "minus").replace("_", "")
     t = t.replace("*", "star").replace("'", "prime")
+    t = t.replace("\\", "")  # Remove LaTeX escapes
     t = re.sub(r'\s+', '', t)
     return t
 
 
 def _extract_state_tokens(text: str) -> List[str]:
     """Extract state tokens like X(6900), Pc(4440), Zb(10610) from text."""
-    # Pattern for exotic states: Letter(s) + optional subscript + (mass)
-    pattern = r'[XYZPT]c?s?b?_?[a-z]*\s*\(\s*\d{3,5}\s*\)'
-    matches = re.findall(pattern, text, re.IGNORECASE)
-    return [_normalize_token(m) for m in matches]
+    tokens = []
+
+    # Pattern 1: Standard format X(1234), Pc(4312), Zb(10610), etc.
+    pattern1 = r'[XYZPT]c?s?b?_?[a-z]*\s*[\(\[]?\s*\d{3,5}\s*[\)\]]?'
+
+    # Pattern 2: LaTeX format like $X(4630)$ or X_{c}(4312)
+    pattern2 = r'[XYZPT]_?\{?c?s?b?\}?\s*[\(\[]?\s*\d{3,5}\s*[\)\]]?'
+
+    # Pattern 3: Just mass numbers in context of exotic states
+    # e.g., "exotic resonance at 4630 MeV"
+    pattern3 = r'(?:exotic|resonance|state|charmonium|tetraquark|pentaquark).*?(\d{4,5})\s*(?:MeV|GeV)?'
+
+    for pattern in [pattern1, pattern2]:
+        matches = re.findall(pattern, text, re.IGNORECASE)
+        for m in matches:
+            # Extract the mass number
+            mass_match = re.search(r'\d{3,5}', m)
+            if mass_match:
+                tokens.append(_normalize_token(m))
+
+    # Also extract raw mass numbers near exotic keywords
+    for match in re.finditer(pattern3, text, re.IGNORECASE):
+        mass = match.group(1)
+        tokens.append(f"x{mass}")  # Normalize as x{mass}
+
+    return list(set(tokens))  # Deduplicate
 
 
 def _extract_channel_tokens(text: str) -> List[str]:
     """Extract channel tokens like J/psi p, D0 D0 pi from text."""
     tokens = []
-    # Common channel patterns
+
+    # Preprocess: normalize LaTeX to Unicode for easier matching
+    text = text.replace(r'\psi', 'ψ').replace(r'\phi', 'φ')
+    text = text.replace(r'\pi', 'π').replace(r'\Upsilon', 'Υ')
+    text = text.replace(r'\Lambda', 'Λ').replace(r'\gamma', 'γ')
+    # Remove $ signs and extra backslashes
+    text = text.replace('$', ' ').replace('\\', '')
+
+    # Common channel patterns - expanded for better matching
     patterns = [
-        r'J/ψ\s*[pK]', r'J/psi\s*[pK]',
-        r'J/ψ\s*J/ψ', r'J/psi\s*J/psi', r'JψJψ',
-        r'D[0\+\-]\s*D[0\+\-]', r'D\*?\s*D\*?',
+        # J/psi combinations
+        r'J/ψ\s*[pKπ]', r'J/psi\s*[pK]', r'jpsi\s*[pK]',
+        r'J/ψ\s*J/ψ', r'J/psi\s*J/psi', r'JψJψ', r'jpsi\s*jpsi',
+        r'J/ψ\s*φ', r'J/ψ\s*phi', r'J/psi\s*phi', r'jpsi\s*phi',
+        r'J/ψφ', r'jpsiphi', r'ψφ', r'psiphi',  # No space variants
+        # D meson combinations
+        r'D[0\+\-]\s*D[0\+\-]', r'D\*?\s*D\*?', r'D[sS]?\s*D[sS]?',
+        r'D\+?\s*D\-?', r'D0\s*D0',
+        # Pion combinations
         r'π\+?\-?\s*π\+?\-?', r'pi\+?\-?\s*pi',
-        r'Υ\s*π', r'Upsilon\s*pi',
+        r'ππ', r'pipi',
+        # Upsilon combinations
+        r'Υ\s*π', r'Upsilon\s*pi', r'Υπ',
+        # h_b/h_c combinations
         r'h[bc]\s*π', r'hb\s*pi', r'hc\s*pi',
-        r'ψ\s*\(2S\)', r'psi\s*2S',
+        # psi(2S)
+        r'ψ\s*\(2S\)', r'psi\s*2S', r'psi2s',
+        # phi combinations
+        r'φ\s*φ', r'phi\s*phi', r'φφ',
+        # Lambda combinations
+        r'Λ[bc]?\s*p', r'Lambda[bc]?\s*p',
     ]
     for p in patterns:
-        if re.search(p, text, re.IGNORECASE):
-            tokens.append(_normalize_token(re.search(p, text, re.IGNORECASE).group()))
-    return tokens
+        match = re.search(p, text, re.IGNORECASE)
+        if match:
+            tokens.append(_normalize_token(match.group()))
+
+    return list(set(tokens))  # Deduplicate
 
 
 def score_hepdata_record(candidate: "Candidate", record: Dict[str, Any]) -> HEPDataScore:
@@ -166,18 +213,20 @@ def score_hepdata_record(candidate: "Candidate", record: Dict[str, Any]) -> HEPD
                 reasons.append(f"Exact INSPIRE ID match: {inspire_id}")
                 break
 
-    # 2. Collaboration match
+    # 2. Collaboration match - be strict about actual match
     if candidate.collaboration:
         cand_collab = candidate.collaboration.upper()
-        if cand_collab in collab or collab in cand_collab:
+        # Only give points if HEPData actually has a collaboration listed and it matches
+        if collab and (cand_collab in collab or collab in cand_collab):
             score += 100
             breakdown["collaboration_match"] = 100
             reasons.append(f"Collaboration match: {collab}")
         elif collab and cand_collab and collab != cand_collab:
-            # Wrong collaboration penalty
+            # Wrong collaboration penalty - only if both are set and different
             score -= 200
             breakdown["wrong_collaboration"] = -200
             reasons.append(f"Wrong collaboration: expected {cand_collab}, got {collab}")
+        # If collab is empty, no points but no penalty either
 
     # 3. State token matching
     title_states = _extract_state_tokens(title + " " + abstract)
@@ -228,17 +277,25 @@ def score_hepdata_record(candidate: "Candidate", record: Dict[str, Any]) -> HEPD
         breakdown["term_matches"] = pts
         reasons.append(f"Search term matches: {term_matches}")
 
-    # 6. Penalty for clearly unrelated physics
+    # 6. Penalty for clearly unrelated physics - only severe mismatches
+    # Note: "luminosity" and "calibration" are common in all HEP papers, not penalized
     unrelated_keywords = [
-        "higgs", "top quark", "w boson", "z boson", "supersymmetry", "susy",
-        "dark matter", "neutrino oscillation", "cms detector", "atlas detector",
-        "trigger", "calibration", "luminosity", "minimum bias",
+        ("higgs", -100),  # Very unrelated to exotic hadrons
+        ("top quark", -100),
+        ("w boson", -80),
+        ("z boson", -80),
+        ("supersymmetry", -100),
+        ("susy", -100),
+        ("dark matter", -100),
+        ("neutrino oscillation", -100),
+        ("minimum bias", -50),
+        ("forward-backward asymmetry", -30),  # Likely wrong analysis type
     ]
-    for kw in unrelated_keywords:
+    for kw, penalty in unrelated_keywords:
         if kw in full_text and not any(kw in t.lower() for t in candidate.search_terms):
-            score -= 50
+            score += penalty  # penalty is already negative
             breakdown.setdefault("unrelated_penalty", 0)
-            breakdown["unrelated_penalty"] -= 50
+            breakdown["unrelated_penalty"] += penalty
             reasons.append(f"Unrelated keyword: {kw}")
 
     return HEPDataScore(

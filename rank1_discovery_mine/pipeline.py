@@ -420,13 +420,24 @@ class Pipeline:
             except Exception as e:
                 self._write_log(slug, "extract_numeric", f"HEPData conversion error: {e}")
 
-        # Try PDF table extraction only if we don't have HEPData files
-        # HEPData CSVs are much higher quality than PDF-extracted tables
+        # Copy existing HEPData CSVs to extracted directory
+        # These are already in proper format from the HEPData API
         hepdata_csvs = list(raw_dir.glob("hepdata_*.csv"))
         if hepdata_csvs:
             self._write_log(slug, "extract_numeric",
-                f"Skipping PDF extraction - have {len(hepdata_csvs)} HEPData CSVs")
-        else:
+                f"Copying {len(hepdata_csvs)} HEPData CSVs to extracted/")
+            import shutil
+            from urllib.parse import unquote
+            for csv_file in hepdata_csvs:
+                # Decode URL-encoded names like "Table%201" -> "Table 1"
+                decoded_name = unquote(csv_file.name)
+                dest_path = extracted_dir / decoded_name
+                shutil.copy2(csv_file, dest_path)
+                extracted_files.append(str(dest_path))
+                self._write_log(slug, "extract_numeric", f"  Copied: {decoded_name}")
+
+        # Try PDF table extraction only if we don't have any extracted files yet
+        if not extracted_files:
             pdf_files = list(raw_dir.glob("*.pdf"))
             if pdf_files:
                 self._write_log(slug, "extract_numeric", f"Processing {len(pdf_files)} PDF files")
