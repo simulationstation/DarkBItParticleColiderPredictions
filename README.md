@@ -67,10 +67,10 @@ must be **identical across all decay channels**. We test this by:
 ### Prediction: LHCb Pc(4440)/Pc(4457) Extensions
 
 **Source**: HEPData record ins1728691 (PRL 122, 222001)
-**Pipeline Run**: 2026-01-02 (Discovery Mine v1.0)
+**Pipeline Run**: 2026-01-02 (Discovery Mine v2.0 with nested invariant checks)
 **Overall Verdict**: **NOT_REJECTED** ✓
 
-The pentaquark doublet Pc(4440)/Pc(4457) shows **perfect rank-1 consistency** across multiple HEPData tables with different analysis cuts.
+The pentaquark doublet Pc(4440)/Pc(4457) shows **rank-1 consistency** across multiple HEPData tables with different analysis cuts.
 
 #### State Parameters
 
@@ -81,24 +81,35 @@ The pentaquark doublet Pc(4440)/Pc(4457) shows **perfect rank-1 consistency** ac
 
 #### Test Results
 
-| Pair | Tables | Λ | p_boot | χ²/dof (A) | χ²/dof (B) | Verdict |
-|------|--------|---|--------|------------|------------|---------|
-| **1** | Full vs mKp>1.9 cut | **0.00** | **1.000** | 1.46 ✓ | 1.48 ✓ | NOT_REJECTED |
-| **2** | mKp cut vs cosθ-wt | **0.00** | **1.000** | 1.48 ✓ | 1.91 ✓ | NOT_REJECTED |
+| Pair | Tables | Λ | Λ_raw | p_boot | χ²/dof (A) | χ²/dof (B) | Verdict |
+|------|--------|---|-------|--------|------------|------------|---------|
+| **1** | Full vs mKp>1.9 cut | **5.68** | 5.68 | **0.078** | 1.46 ✓ | 1.48 ✓ | NOT_REJECTED |
+| **2** | mKp cut vs cosθ-wt | **1.93** | 1.93 | **0.529** | 1.48 ✓ | 1.91 ✓ | NOT_REJECTED |
+
+#### Sanity Checks
+
+| Pair | Nested Invariant | Bootstrap Valid/Failed |
+|------|------------------|------------------------|
+| 1 | ✓ PASS (nll_unc < nll_con) | 50/0 |
+| 2 | ✓ PASS (nll_unc < nll_con) | 50/0 |
 
 #### Coupling Ratios Extracted
 
-| Analysis | |R| = g(Pc4457)/g(Pc4440) | arg(R) |
-|----------|---------------------------|--------|
-| Table 1 (Full) | 0.252 | -72° |
-| Table 2 (mKp cut) | 0.281 | -43° |
-| Table 3 (cosθ-wt) | 0.439 | +129° |
-| **Shared (Pair 1)** | **0.446** | **+130°** |
-| **Shared (Pair 2)** | **0.445** | **+128°** |
+| Fit Type | Channel | |R| = g(Pc4457)/g(Pc4440) | arg(R) |
+|----------|---------|---------------------------|--------|
+| Individual | Table 1 (Full) | 0.252 | -72° |
+| Individual | Table 2 (mKp cut) | 0.281 | -43° |
+| Individual | Table 3 (cosθ-wt) | 0.439 | +129° |
+| Unconstrained | Pair 1 A | 0.439 | +134° |
+| Unconstrained | Pair 1 B | 0.454 | +126° |
+| **Constrained** | **Pair 1 Shared** | **0.446** | **+130°** |
+| Unconstrained | Pair 2 A | 0.454 | +126° |
+| Unconstrained | Pair 2 B | 0.248 | -53° |
+| **Constrained** | **Pair 2 Shared** | **0.445** | **+128°** |
 
 #### Physics Interpretation
 
-The **Λ = 0.00** values indicate the constrained and unconstrained fits are essentially identical—the data naturally prefers a shared coupling ratio without any statistical penalty. This strongly supports:
+Pair 1 shows Λ = 5.68 with p_boot = 0.078, indicating mild tension but still consistent with the null hypothesis. Pair 2 shows Λ = 1.93 with p_boot = 0.529, indicating excellent consistency. Both pairs support:
 
 1. **Common production mechanism**: Both Pc states arise from the same QCD dynamics
 2. **Molecular interpretation**: The mass splitting (~17 MeV) and width ratio (~3:1) are consistent with S-wave Σc⁺D⁰ and Σc⁺D*⁰ molecular states
@@ -580,11 +591,17 @@ The rank-1 test harness includes publication-grade statistical machinery:
 
 | Feature | Description |
 |---------|-------------|
+| **Nested model invariant** | Enforces nll_unc ≤ nll_con (optimizer sanity check) |
+| **Lambda_raw tracking** | Reports raw Λ before any clamping for diagnostics |
+| **Retry logic** | If invariant violated, retry unconstrained from constrained solution |
 | **dof_diff = 2** | Correct degrees of freedom for complex R |
-| **Bootstrap p-values** | Primary inference method (800 replicates default) |
+| **Bootstrap p-values** | Primary inference method with invariant enforcement |
+| **Conservative p-estimator** | p = (1 + k) / (1 + n_valid) for finite-sample correction |
 | **Fit-health gates** | 0.5 < chi2/dof < 3.0 prevents false conclusions |
 | **Multi-start optimizer** | 300 starts with L-BFGS-B + Powell fallback |
-| **Verdict system** | NOT_REJECTED / DISFAVORED / INCONCLUSIVE / MODEL_MISMATCH |
+| **Verdict system** | NOT_REJECTED / DISFAVORED / INCONCLUSIVE / OPTIMIZER_FAILURE |
+
+**New in v2.0**: The harness now detects and handles optimizer failures where the unconstrained fit incorrectly returns higher NLL than the constrained fit. Previously, these failures were silently masked by clamping Λ to 0, producing false NOT_REJECTED verdicts. See `FIX_REPORT.md` for details.
 
 ### Harness Location
 
@@ -843,9 +860,17 @@ tail -f out/run.log
 
 ---
 
-## Rank1 Discovery Mine
+## Rank1 Discovery Mine (v2.0)
 
 Automated system for discovering publicly available data for exotic hadron families and running rank-1 factorization tests.
+
+**v2.0 Updates** (2026-01-02):
+- Fixed critical bug where optimizer failures produced false NOT_REJECTED verdicts
+- Added nested model invariant enforcement (nll_unc ≤ nll_con)
+- Lambda_raw tracking for diagnostics
+- Retry logic: re-initialize unconstrained from constrained solution
+- Conservative bootstrap p-value estimator
+- Complete report generation with sanity checks and coupling ratio tables
 
 ### Quick Start
 
