@@ -1,0 +1,91 @@
+{
+  "slug": "atlas_jpsiphi_x4140_family",
+  "title": "ATLAS J/psi-phi X(4140) Family",
+  "states": [
+    "X(4140)",
+    "X(4274)"
+  ],
+  "channels": [
+    {
+      "id": "ch_bu_jpsiphi_k_atlas",
+      "label": "B+ -> J/psi phi K+ (ATLAS)",
+      "final_state": "J/psi phi",
+      "notes": null
+    },
+    {
+      "id": "ch_prompt_jpsiphi_atlas",
+      "label": "Prompt J/psi phi (ATLAS)",
+      "final_state": "J/psi phi",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "cern_opendata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "ATLAS X(4140)",
+    "ATLAS J/psi phi"
+  ],
+  "notes": "ATLAS measurements of X(4140) region.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [],
+  "hepdata_ids": [],
+  "collaboration": "ATLAS",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.513156+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=ATLAS+X%284140%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=ATLAS+J%2Fpsi+phi&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=ATLAS+X%284140%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=ATLAS+X%284274%29&format=json"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=ATLAS+X%284140%29&size=10&experiment=ATLAS"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=ATLAS+J%2Fpsi+phi&size=10&experiment=ATLAS"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=X%284140%29&size=5&experiment=ATLAS"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=X%284274%29&size=5&experiment=ATLAS"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:ATLAS+X%284140%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:ATLAS+J%2Fpsi+phi&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:atlas+X%284140%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:atlas+X%284274%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.514862+00:00"
+}

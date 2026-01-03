@@ -1,0 +1,98 @@
+{
+  "slug": "lhcb_zcs_4000_4220",
+  "title": "LHCb Zcs(4000)/Zcs(4220) in J/psi K",
+  "states": [
+    "Zcs(4000)",
+    "Zcs(4220)"
+  ],
+  "channels": [
+    {
+      "id": "ch_bu_jpsiks_k",
+      "label": "B+ -> J/psi K+s K-",
+      "final_state": "J/psi K",
+      "notes": null
+    },
+    {
+      "id": "ch_b0_jpsik_kstar",
+      "label": "B0 -> J/psi K- K*+",
+      "final_state": "J/psi K",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "LHCb Zcs",
+    "Zcs(4000)",
+    "Zcs(4220)",
+    "J/psi K strange tetraquark"
+  ],
+  "notes": "Strange-charm tetraquark candidates analogous to Zc states.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "2103.01803"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "LHCb",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.519456+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+Zcs&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Zcs%284000%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Zcs%284220%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=J%2Fpsi+K+strange+tetraquark&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+Zcs%284000%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+Zcs%284220%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2103.01803"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:LHCb+Zcs&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Zcs%284000%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Zcs%284220%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:J%2Fpsi+K+strange+tetraquark&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+Zcs%284000%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+Zcs%284220%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.520978+00:00"
+}

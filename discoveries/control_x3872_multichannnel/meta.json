@@ -1,0 +1,112 @@
+{
+  "slug": "control_x3872_multichannnel",
+  "title": "X(3872) Multi-channel Control",
+  "states": [
+    "X(3872)"
+  ],
+  "channels": [
+    {
+      "id": "ch_jpsipipi",
+      "label": "J/psi pi+ pi-",
+      "final_state": "J/psi pi pi",
+      "notes": null
+    },
+    {
+      "id": "ch_jpsigamma",
+      "label": "J/psi gamma",
+      "final_state": "J/psi gamma",
+      "notes": null
+    },
+    {
+      "id": "ch_psi2sgamma",
+      "label": "psi(2S) gamma",
+      "final_state": "psi(2S) gamma",
+      "notes": null
+    },
+    {
+      "id": "ch_d0dstarbar",
+      "label": "D0 D*bar0",
+      "final_state": "D0 D*bar0",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "X(3872)",
+    "chi_c1(3872)",
+    "X(3872) J/psi pi pi",
+    "X(3872) D D*"
+  ],
+  "notes": "Well-established exotic state. Use as control/benchmark for pipeline.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "multi_state_pairwise",
+  "arxiv_ids": [
+    "2005.13419",
+    "1904.01892"
+  ],
+  "hepdata_ids": [
+    "1836131"
+  ],
+  "collaboration": "Multiple",
+  "category": "control",
+  "created_utc": "2026-01-02T23:42:59.553352+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=X%283872%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=chi_c1%283872%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=X%283872%29+J%2Fpsi+pi+pi&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=X%283872%29+D+D%2A&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/api/record/ins1836131"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Multiple+X%283872%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2005.13419"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1904.01892"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:X%283872%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:chi_c1%283872%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:X%283872%29+J%2Fpsi+pi+pi&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:X%283872%29+D+D%2A&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:multiple+X%283872%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.554545+00:00"
+}

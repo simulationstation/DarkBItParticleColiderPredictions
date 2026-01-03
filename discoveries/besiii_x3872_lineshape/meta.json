@@ -1,0 +1,94 @@
+{
+  "slug": "besiii_x3872_lineshape",
+  "title": "BESIII X(3872) Lineshape Studies",
+  "states": [
+    "X(3872)",
+    "psi(2S)"
+  ],
+  "channels": [
+    {
+      "id": "ch_ee_gammaxjpsipipi",
+      "label": "e+e- -> gamma X(3872) -> gamma J/psi pi pi",
+      "final_state": "J/psi pi pi",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_gammaxd0dstar",
+      "label": "e+e- -> gamma X(3872) -> gamma D0 D*bar",
+      "final_state": "D0 D*bar",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "BESIII X(3872)",
+    "X(3872) lineshape",
+    "X(3872) BESIII gamma"
+  ],
+  "notes": "BESIII precision X(3872) measurements. Control sample.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "multi_state_pairwise",
+  "arxiv_ids": [
+    "1901.03992",
+    "2007.07287"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "BESIII",
+  "category": "control",
+  "created_utc": "2026-01-02T23:42:59.570859+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+X%283872%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=X%283872%29+lineshape&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=X%283872%29+BESIII+gamma&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+X%283872%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+psi%282S%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1901.03992"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2007.07287"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:BESIII+X%283872%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:X%283872%29+lineshape&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:X%283872%29+BESIII+gamma&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+X%283872%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+psi%282S%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.572230+00:00"
+}

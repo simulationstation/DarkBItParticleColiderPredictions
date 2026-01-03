@@ -1,0 +1,89 @@
+{
+  "slug": "lhcb_x3960_dsd_s",
+  "title": "LHCb X(3960) in Ds+ Ds-",
+  "states": [
+    "X(3960)",
+    "chi_c0(3930)"
+  ],
+  "channels": [
+    {
+      "id": "ch_dsds",
+      "label": "Ds+ Ds-",
+      "final_state": "Ds+ Ds-",
+      "notes": null
+    },
+    {
+      "id": "ch_dsds_alt",
+      "label": "Ds+ Ds- (alternative selection)",
+      "final_state": "Ds+ Ds-",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "LHCb X(3960)",
+    "Ds Ds resonance",
+    "ccss tetraquark"
+  ],
+  "notes": "Possible ccss tetraquark state.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "2209.02711"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "LHCb",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.565116+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%283960%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Ds+Ds+resonance&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=ccss+tetraquark&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%283960%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+chi_c0%283930%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2209.02711"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:LHCb+X%283960%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Ds+Ds+resonance&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:ccss+tetraquark&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+X%283960%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+chi_c0%283930%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.566414+00:00"
+}

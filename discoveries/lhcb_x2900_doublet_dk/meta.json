@@ -1,0 +1,103 @@
+{
+  "slug": "lhcb_x2900_doublet_dk",
+  "title": "LHCb X(2900) Doublet in DK",
+  "states": [
+    "X0(2900)",
+    "X1(2900)"
+  ],
+  "channels": [
+    {
+      "id": "ch_bu_dsplusdk",
+      "label": "B+ -> D+s D- K+",
+      "final_state": "D- K+",
+      "notes": null
+    },
+    {
+      "id": "ch_bu_d0dk",
+      "label": "B+ -> D0 Dbar0 K+",
+      "final_state": "D K",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "LHCb X(2900)",
+    "LHCb DK exotic",
+    "open charm tetraquark",
+    "X0(2900) X1(2900)"
+  ],
+  "notes": "First open-charm tetraquark candidates. Two states with J^P = 0+ and 1-.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "2009.00025",
+    "2009.00026"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "LHCb",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.516432+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%282900%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+DK+exotic&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=open+charm+tetraquark&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=X0%282900%29+X1%282900%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X0%282900%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X1%282900%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2009.00025"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2009.00026"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:LHCb+X%282900%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:LHCb+DK+exotic&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:open+charm+tetraquark&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:X0%282900%29+X1%282900%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+X0%282900%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+X1%282900%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.517563+00:00"
+}

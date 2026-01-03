@@ -1,0 +1,94 @@
+{
+  "slug": "besiii_y4360_y4660_pipipsi2s",
+  "title": "BESIII Y(4360)/Y(4660) in pi+pi- psi(2S)",
+  "states": [
+    "Y(4360)",
+    "Y(4660)"
+  ],
+  "channels": [
+    {
+      "id": "ch_ee_pipipsi2s",
+      "label": "e+e- -> pi+pi- psi(2S)",
+      "final_state": "pi+pi- psi(2S)",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_scan",
+      "label": "e+e- -> hadrons (R scan)",
+      "final_state": "hadrons",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "BESIII Y(4360)",
+    "Y(4660) psi(2S)",
+    "pi pi psi(2S) BESIII"
+  ],
+  "notes": "Y states in pi+pi- psi(2S). Related to Y(4220)/Y(4320) analysis.",
+  "expected_data_kind": "cross_section_scan",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "1611.01317",
+    "1912.11253"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "BESIII",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.531586+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Y%284360%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Y%284660%29+psi%282S%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=pi+pi+psi%282S%29+BESIII&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Y%284360%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Y%284660%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1611.01317"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1912.11253"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:BESIII+Y%284360%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Y%284660%29+psi%282S%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:pi+pi+psi%282S%29+BESIII&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Y%284360%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Y%284660%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.533215+00:00"
+}

@@ -1,0 +1,95 @@
+{
+  "slug": "belle_yb_10750_10860",
+  "title": "Belle Yb(10750)/Yb(10860) in Upsilon pi pi",
+  "states": [
+    "Yb(10750)",
+    "Upsilon(10860)"
+  ],
+  "channels": [
+    {
+      "id": "ch_ee_ups1spipi",
+      "label": "e+e- -> Upsilon(1S) pi+ pi-",
+      "final_state": "Upsilon(1S) pi pi",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_ups2spipi",
+      "label": "e+e- -> Upsilon(2S) pi+ pi-",
+      "final_state": "Upsilon(2S) pi pi",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_ups3spipi",
+      "label": "e+e- -> Upsilon(3S) pi+ pi-",
+      "final_state": "Upsilon(3S) pi pi",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "Belle Yb(10750)",
+    "Upsilon(10860) pi pi",
+    "bottomonium exotic"
+  ],
+  "notes": "Bottomonium analogs of Y states.",
+  "expected_data_kind": "cross_section_scan",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "1508.06562"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "Belle",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.558935+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Belle+Yb%2810750%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Upsilon%2810860%29+pi+pi&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=bottomonium+exotic&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Belle+Yb%2810750%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Belle+Upsilon%2810860%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1508.06562"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Belle+Yb%2810750%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Upsilon%2810860%29+pi+pi&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:bottomonium+exotic&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:belle+Yb%2810750%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:belle+Upsilon%2810860%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.560268+00:00"
+}

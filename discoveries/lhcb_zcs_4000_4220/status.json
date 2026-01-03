@@ -1,0 +1,12 @@
+{
+  "slug": "lhcb_zcs_4000_4220",
+  "current_step": "acquire",
+  "completed_steps": [
+    "scaffold",
+    "locate_data"
+  ],
+  "last_update_utc": "2026-01-02T23:42:59.521123+00:00",
+  "blocked_reason": null,
+  "error_message": null,
+  "discovered_urls": []
+}

@@ -1,0 +1,115 @@
+{
+  "slug": "cms_jpsiphi_x4140_family",
+  "title": "CMS J/psi-phi X(4140) Family",
+  "states": [
+    "X(4140)",
+    "X(4274)"
+  ],
+  "channels": [
+    {
+      "id": "ch_bu_jpsiphi_k_cms",
+      "label": "B+ -> J/psi phi K+ (CMS)",
+      "final_state": "J/psi phi",
+      "notes": null
+    },
+    {
+      "id": "ch_prompt_jpsiphi",
+      "label": "Prompt J/psi phi production",
+      "final_state": "J/psi phi",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "cern_opendata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "CMS X(4140)",
+    "CMS J/psi phi",
+    "CMS B+ J/psi phi"
+  ],
+  "notes": "CMS observation of X(4140) in B+ decay.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "1309.6920",
+    "1712.02170"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "CMS",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.509764+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=CMS+X%284140%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=CMS+J%2Fpsi+phi&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=CMS+B%2B+J%2Fpsi+phi&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=CMS+X%284140%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=CMS+X%284274%29&format=json"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=CMS+X%284140%29&size=10&experiment=CMS"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=CMS+J%2Fpsi+phi&size=10&experiment=CMS"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=CMS+B%2B+J%2Fpsi+phi&size=10&experiment=CMS"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=X%284140%29&size=5&experiment=CMS"
+    },
+    {
+      "source": "cern_opendata",
+      "query": "https://opendata.cern.ch/api/records?q=X%284274%29&size=5&experiment=CMS"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1309.6920"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1712.02170"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:CMS+X%284140%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:CMS+J%2Fpsi+phi&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:CMS+B%2B+J%2Fpsi+phi&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:cms+X%284140%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:cms+X%284274%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.511408+00:00"
+}

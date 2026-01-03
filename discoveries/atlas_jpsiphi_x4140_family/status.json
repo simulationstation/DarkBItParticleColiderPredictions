@@ -1,0 +1,12 @@
+{
+  "slug": "atlas_jpsiphi_x4140_family",
+  "current_step": "acquire",
+  "completed_steps": [
+    "scaffold",
+    "locate_data"
+  ],
+  "last_update_utc": "2026-01-02T23:42:59.515121+00:00",
+  "blocked_reason": null,
+  "error_message": null,
+  "discovered_urls": []
+}

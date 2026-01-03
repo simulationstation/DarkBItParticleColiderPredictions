@@ -1,0 +1,80 @@
+{
+  "slug": "lhcb_x4630_jpsi_phi",
+  "title": "LHCb X(4630) in J/psi phi",
+  "states": [
+    "X(4630)",
+    "X(4685)"
+  ],
+  "channels": [
+    {
+      "id": "ch_bs_jpsiphiph",
+      "label": "Bs -> J/psi phi phi",
+      "final_state": "J/psi phi",
+      "notes": null
+    },
+    {
+      "id": "ch_bu_jpsiphik",
+      "label": "B+ -> J/psi phi K+",
+      "final_state": "J/psi phi",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "LHCb X(4630)",
+    "Bs J/psi phi phi"
+  ],
+  "notes": "New charmonium-like states in J/psi phi.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "2405.07299"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "LHCb",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.568143+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%284630%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Bs+J%2Fpsi+phi+phi&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%284630%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%284685%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2405.07299"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:LHCb+X%284630%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Bs+J%2Fpsi+phi+phi&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+X%284630%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+X%284685%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.569468+00:00"
+}

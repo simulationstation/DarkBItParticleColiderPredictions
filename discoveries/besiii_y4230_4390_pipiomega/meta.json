@@ -1,0 +1,95 @@
+{
+  "slug": "besiii_y4230_4390_pipiomega",
+  "title": "BESIII Y(4230)/Y(4390) in omega chi_cJ",
+  "states": [
+    "Y(4230)",
+    "Y(4390)"
+  ],
+  "channels": [
+    {
+      "id": "ch_ee_omegachic0",
+      "label": "e+e- -> omega chi_c0",
+      "final_state": "omega chi_c0",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_omegachic1",
+      "label": "e+e- -> omega chi_c1",
+      "final_state": "omega chi_c1",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_omegachic2",
+      "label": "e+e- -> omega chi_c2",
+      "final_state": "omega chi_c2",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "BESIII omega chi_c",
+    "Y(4230) omega",
+    "e+e- omega charmonium"
+  ],
+  "notes": "Y states in omega chi_cJ final states.",
+  "expected_data_kind": "cross_section_scan",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "1903.04695"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "BESIII",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.556018+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+omega+chi_c&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Y%284230%29+omega&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=e%2Be-+omega+charmonium&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Y%284230%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Y%284390%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1903.04695"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:BESIII+omega+chi_c&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Y%284230%29+omega&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:e%2Be-+omega+charmonium&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Y%284230%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Y%284390%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.557446+00:00"
+}

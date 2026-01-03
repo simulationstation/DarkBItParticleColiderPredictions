@@ -1,0 +1,104 @@
+{
+  "slug": "lhcb_x6900_jpsijpsi",
+  "title": "LHCb X(6900) in J/psi J/psi",
+  "states": [
+    "X(6200)",
+    "X(6600)",
+    "X(6900)",
+    "X(7300)"
+  ],
+  "channels": [
+    {
+      "id": "ch_jpsijpsi_lhcb",
+      "label": "J/psi J/psi (LHCb)",
+      "final_state": "J/psi J/psi",
+      "notes": null
+    },
+    {
+      "id": "ch_jpsipsi2s_lhcb",
+      "label": "J/psi psi(2S) (LHCb)",
+      "final_state": "J/psi psi(2S)",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "LHCb X(6900)",
+    "di-J/psi LHCb",
+    "fully charm tetraquark"
+  ],
+  "notes": "Fully-charm tetraquark candidates. Multiple structures observed.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "multi_state_pairwise",
+  "arxiv_ids": [
+    "2006.16957",
+    "2011.08157"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "LHCb",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.547226+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%286900%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=di-J%2Fpsi+LHCb&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=fully+charm+tetraquark&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%286200%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%286600%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%286900%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+X%287300%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2006.16957"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2011.08157"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:LHCb+X%286900%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:di-J%2Fpsi+LHCb&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:fully+charm+tetraquark&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+X%286200%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+X%286600%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.548624+00:00"
+}

@@ -1,0 +1,94 @@
+{
+  "slug": "besiii_zc4020_pihc_dstar_dstar",
+  "title": "BESIII Zc(4020)/Zc(3900) in pi hc and D*D*",
+  "states": [
+    "Zc(4020)",
+    "Zc(3900)"
+  ],
+  "channels": [
+    {
+      "id": "ch_ee_pipihc",
+      "label": "e+e- -> pi+pi- hc (Zc peak)",
+      "final_state": "pi hc",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_pidstardstar",
+      "label": "e+e- -> pi (D*D*)",
+      "final_state": "D*D*",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "BESIII Zc(4020)",
+    "Zc(4020) pi hc",
+    "Zc(4020) D*D*"
+  ],
+  "notes": "Higher-mass charged Zc state. Tests isospin partner of Zc(3900).",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "1309.1896",
+    "1308.2760"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "BESIII",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.528923+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Zc%284020%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Zc%284020%29+pi+hc&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Zc%284020%29+D%2AD%2A&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Zc%284020%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Zc%283900%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1309.1896"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=1308.2760"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:BESIII+Zc%284020%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Zc%284020%29+pi+hc&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Zc%284020%29+D%2AD%2A&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Zc%284020%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Zc%283900%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.530145+00:00"
+}

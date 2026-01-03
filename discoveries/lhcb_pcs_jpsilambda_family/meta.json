@@ -1,0 +1,112 @@
+{
+  "slug": "lhcb_pcs_jpsilambda_family",
+  "title": "LHCb Pcs J/psi-Lambda Family",
+  "states": [
+    "Pcs(4338)",
+    "Pcs(4459)"
+  ],
+  "channels": [
+    {
+      "id": "ch_xib_jpsilambdak",
+      "label": "Xi_b -> J/psi Lambda K",
+      "final_state": "J/psi Lambda",
+      "notes": null
+    },
+    {
+      "id": "ch_bu_jpsilambdapbar",
+      "label": "B- -> J/psi Lambda pbar",
+      "final_state": "J/psi Lambda",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "LHCb Pcs",
+    "Pcs(4459)",
+    "Pcs(4338)",
+    "strange pentaquark",
+    "J/psi Lambda LHCb"
+  ],
+  "notes": "Strange pentaquark candidates. Different production modes for each state.",
+  "expected_data_kind": "binned_spectrum",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "2012.10380",
+    "2210.10346"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "LHCb",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.538253+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+Pcs&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Pcs%284459%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Pcs%284338%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=strange+pentaquark&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=J%2Fpsi+Lambda+LHCb&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+Pcs%284338%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=LHCb+Pcs%284459%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2012.10380"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2210.10346"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:LHCb+Pcs&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Pcs%284459%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Pcs%284338%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:strange+pentaquark&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:J%2Fpsi+Lambda+LHCb&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+Pcs%284338%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:lhcb+Pcs%284459%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.539433+00:00"
+}

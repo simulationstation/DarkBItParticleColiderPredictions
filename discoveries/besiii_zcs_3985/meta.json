@@ -1,0 +1,89 @@
+{
+  "slug": "besiii_zcs_3985",
+  "title": "BESIII Zcs(3985) in D-s D*0 / D*-s D0",
+  "states": [
+    "Zcs(3985)",
+    "Zcs(4000)"
+  ],
+  "channels": [
+    {
+      "id": "ch_ee_kzcs_ds_dstar",
+      "label": "e+e- -> K+ (D-s D*0 + D*-s D0)",
+      "final_state": "D-s D*0",
+      "notes": null
+    },
+    {
+      "id": "ch_ee_kzcs_recoil",
+      "label": "e+e- -> K+ Zcs recoil",
+      "final_state": "Ds D",
+      "notes": null
+    }
+  ],
+  "preferred_sources": [
+    "hepdata",
+    "arxiv_pdf"
+  ],
+  "search_terms": [
+    "BESIII Zcs",
+    "Zcs(3985)",
+    "strange charm exotic"
+  ],
+  "notes": "BESIII discovery of Zcs(3985). May be related to LHCb Zcs states.",
+  "expected_data_kind": "cross_section_scan",
+  "rank1_mode": "two_state_ratio",
+  "arxiv_ids": [
+    "2011.07855"
+  ],
+  "hepdata_ids": [],
+  "collaboration": "BESIII",
+  "category": "exotic",
+  "created_utc": "2026-01-02T23:42:59.522728+00:00",
+  "planned_queries": [
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Zcs&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=Zcs%283985%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=strange+charm+exotic&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Zcs%283985%29&format=json"
+    },
+    {
+      "source": "hepdata",
+      "query": "https://www.hepdata.net/search?q=BESIII+Zcs%284000%29&format=json"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?id_list=2011.07855"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:BESIII+Zcs&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:Zcs%283985%29&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:strange+charm+exotic&start=0&max_results=10"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Zcs%283985%29+AND+cat:hep-ex&max_results=5"
+    },
+    {
+      "source": "arxiv",
+      "query": "http://export.arxiv.org/api/query?search_query=all:besiii+Zcs%284000%29+AND+cat:hep-ex&max_results=5"
+    }
+  ],
+  "discovered_urls": [],
+  "last_update_utc": "2026-01-02T23:42:59.523850+00:00"
+}
